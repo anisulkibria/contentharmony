@@ -1,1 +1,1 @@
-# ch-ghost-tw
+# Custom Ghost Theme for Content Harmony
