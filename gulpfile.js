@@ -19,7 +19,7 @@ const gulpZip = require('gulp-zip');
 // Const assigned assets paths
 const paths = {
   style: {
-    src: 'assets/css/scss/main.scss',
+    src: 'assets/css/main.scss',
     dest: 'assets/built/css/'
   },
   script: {
@@ -106,7 +106,7 @@ function zip(done) {
 }
 
 // Const assigned for css, js, hbs file watcher and purgeCSS, browserload etc.
-const styleWatcher = () => watch(['assets/css/*.scss', 'assets/css/scss/*.scss'], styles);
+const styleWatcher = () => watch(['assets/css/*.scss', 'assets/css/**/*.scss'], styles);
 const jsWatcher = () => watch('assets/js/main.js', scripts);
 const hbsWatcher = () => watch(['*.hbs', 'partials/*.hbs'], hbs_files);
 const purgeWatcher = () => watch(['*.hbs', 'partials/*.hbs'], purge);
