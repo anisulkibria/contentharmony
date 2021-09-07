@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+
+    <title>{{meta_title}}</title>
+
+    {{!-- Basic meta information --}}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{!-- Main css for the theme --}}
+    <link rel="stylesheet" href="{{asset 'built/css/main.min.css'}}">
+
+    {{!-- Default Ghost head --}}
+    {{ghost_head}}
+    
+</head>
+<body>
+
+    {{!-- Header section --}}
+    {{> header}}
+
+    {{!-- Main content --}}
+    {{{content}}}
+
+    {{!-- Footer section --}}
+    {{> footer}}
+    
+    {{!-- Main script for the theme --}}
+    <script src="{{asset 'built/js/main.min.js'}}" type="text/javascript"></script>
+
+    {{!-- Default Ghost foot --}}
+    {{ghost_foot}}
+</body>
+</html>
