@@ -5,6 +5,7 @@ const {series, watch, src, dest, parallel} = require('gulp');
 const babel = require('gulp-babel');
 const sass = require('gulp-sass');
 const postCSS = require('gulp-postcss');
+const tailwindCSS = require('tailwindcss');
 const purgeCSS = require('gulp-purgecss');
 const autoPrefixer = require('autoprefixer');
 const customProperties = require('postcss-custom-properties');
@@ -66,6 +67,7 @@ function styles(done) {
         src(paths.style.src, {sourcemaps: true}),
         sass.sync().on('error', sass.logError),
         postCSS([
+            tailwindCSS,
             easyImport,
             customProperties({preserve: false}),
             autoPrefixer({

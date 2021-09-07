@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    h2 {
+        a {
+            color: #111111;
+        }
+    }
+    p {
+        color: #121212;
+    }
+}
