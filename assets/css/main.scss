@@ -1,6 +1,11 @@
 @tailwind base;
+
 @tailwind components;
+
 @tailwind utilities;
+
+@import "kg-card";
+
 @layer components {
     h2 {
         a {
