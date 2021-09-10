@@ -16,8 +16,8 @@ module.exports = {
         },
       },
       container: {
-        center: true,
-        padding: '2rem',
+        // center: true,
+        // padding: '2rem',
       },
     },
     variants: {

@@ -17,13 +17,17 @@
     {{ghost_head}}
     
 </head>
-<body>
+<body class="{{body_class}}">
 
     {{!-- Header section --}}
     {{> header}}
 
-    {{!-- Main content --}}
-    {{{body}}}
+    <main class="content">
+        <div class="main-content">
+        {{!-- Main content --}}
+        {{{body}}}
+        </div>
+    </main>
 
     {{!-- Footer section --}}
     {{> footer}}
