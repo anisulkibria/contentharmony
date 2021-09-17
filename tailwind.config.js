@@ -8,11 +8,7 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-        test_color: {
-            light: '#999999',
-            DEFAULT: '#666666',
-            dark: '#333333',
-            },
+          'white': '#ffffff',
         },
       },
       container: {

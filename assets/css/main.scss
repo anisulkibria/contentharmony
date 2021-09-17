@@ -1,12 +1,13 @@
 // @tailwind base;
 
-// @tailwind components;
+@tailwind components;
 
-// @tailwind utilities;
+@tailwind utilities;
 
 @import "kg-card";
 
 @layer components {
     @import "old.scss";
-
+    @import "navigation"; 
+    @import "footer"; 
 }

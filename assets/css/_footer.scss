@@ -1,0 +1,176 @@
+// Footer
+
+.footer-container {
+    @apply bg-blue-700;
+    background: linear-gradient(0deg, #004ec2 0%, #0a56c7 35%, #1d70eb 100%);
+    margin-top: calc(theme('spacing.32') + 4vw);
+
+    .logo img {
+        @apply w-full mt-6;
+        max-width: 250px;
+    }
+
+    hr {
+        @apply text-white;
+    }
+
+    .icon {
+        @apply mr-4;
+    }
+}
+
+.footer-links {
+    @apply py-16 px-0 text-white;
+    font-size: 1.5em;
+
+    .inner {
+        @apply py-0 px-12;
+        max-width: calc(96rem + 8vw);
+    }
+
+    ul {
+        @apply pl-0;
+
+        li {
+            @apply list-none py-2 px-0;
+
+            a {
+                @apply text-white no-underline;
+
+                &:hover {
+                    @apply underline;
+                }
+            }
+        }
+    }
+
+    i {
+        @apply text-white;
+    }
+}
+
+.nav-footer {
+    @apply relative z-20 py-16 px-4 mt-auto;
+    color: #cacaca;
+
+    a {
+        @apply inline-block no-underline font-normal cursor-pointer;
+        color: #cacaca;
+
+        &:focus,
+        &:hover {
+            color: #cacaca;
+        }
+    }
+
+    .nav-wrapper {
+        @apply flex py-0 px-16;
+    }
+
+    ul {
+        @apply relative flex w-full m-0 p-0 no-underline;
+
+        &:last-child {
+            @apply justify-end;
+        }
+    }
+
+    li {
+        @apply relative mr-12;
+
+        &:last-child {
+            @apply mr-0;
+        }
+
+        a {
+            @apply block m-0 leading-8 whitespace-nowrap overflow-ellipsis no-underline font-normal cursor-pointer;
+            font-size: 1.5em;
+        }
+    }
+
+    li.active a {
+        @apply font-medium;
+        color: #cacaca;
+    }
+}
+
+.nav-copy {
+    @apply block leading-8 whitespace-nowrap;
+    font-size: 1.5em;
+    color: #cacaca;
+
+    .nav-rss {
+        @apply my-0 mx-12;
+    }
+}
+
+.nav-credits {
+    @apply flex-shrink-0 block ml-auto leading-8;
+    font-size: 1.5em;
+    color: #cacaca;
+
+    a {
+        @apply no-underline font-medium;
+        color: inherit;
+    }
+}
+
+// Media Queries - Max Width 960px
+@media only screen and (max-width: 960px) {
+    .footer-container .logo img {
+        @apply text-center;
+    }
+
+    .footer-links {
+        @apply text-center;
+    }
+
+    .nav-footer .nav-wrapper {
+        @apply flex-col text-center;
+    }
+}
+
+// Media Queries - Max Width 640px
+@media only screen and (max-width: 640px) {
+    .nav-footer ul {
+        @apply mb-12 justify-center;
+    }
+
+    .nav-copy {
+        @apply mb-12;
+
+        .nav-rss {
+            @apply my-0 mr-0 ml-4;
+        }
+    }
+
+    .nav-credits {
+        @apply mr-auto;
+    }
+}
+
+// Color Scheme - Dark Disable
+@media (prefers-color-scheme: darkdisabled) {
+    .nav-footer {
+        a {
+            color: #cacaca;
+
+            &:focus,
+            &:hover {
+                color: #cacaca;
+            }
+        }
+
+        li.active a {
+            color: #cacaca;
+        }
+    }
+
+    .nav-copy {
+        color: #cacaca;
+    }
+
+    .nav-credits {
+        color: #cacaca;
+    }
+}

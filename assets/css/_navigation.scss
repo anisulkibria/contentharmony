@@ -1,0 +1,387 @@
+// Navigation
+
+.nav-header {
+    @apply absolute top-0 left-0 w-full text-white;
+    z-index: 400;
+    transition: all ease-out 0.3s;
+
+    .nav-wrapper-control {
+        @apply absolute left-0 top-full w-full cursor-pointer hidden box-border text-white;
+        z-index: 500;
+        transition: all linear 0.1s;
+
+        .inner {
+            @apply flex justify-between;
+
+            a {
+                @apply relative block w-full py-8 px-0 leading-8;
+                font-size: 1.8rem;
+                color: inherit;
+                transition: all ease-out 0.1s;
+
+                i {
+                    @apply inline-block w-16;
+                }
+            }
+        }
+
+        a.nav-search {
+            @apply w-auto text-right;
+        }
+
+        a:focus,
+        .nav-header .nav-wrapper-control a:hover {
+            @apply text-white;
+        }
+    }
+
+    .nav-wrapper {
+        @apply flex py-8 px-16 overflow-hidden;
+        max-height: calc(100vh - theme('spacing.24'));
+    }
+
+    .logo {
+        @apply mr-12;
+
+        a {
+            @apply block h-16 p-0;
+
+            img {
+                @apply block w-auto h-16;
+            }
+        }
+    }
+
+    ul {
+        @apply relative flex w-full my-0 mx-auto p-0 list-none;
+    }
+
+    ul.nav-meta {
+        @apply w-auto justify-end;
+    }
+
+    li {
+        @apply relative mr-12 text-white;
+
+        button,
+        a.button {
+            @apply block w-full bg-transparent whitespace-nowrap leading-8 text-white text-center;
+            border-radius: 0.5rem;
+            margin: 0.125rem 0;
+            padding: 0.75rem 1.25rem;
+            border: 2px solid #fff;
+        }
+
+        &:last-child {
+            @apply mr-0;
+        }
+
+        button:focus,
+        button:hover,
+        a.button:focus,
+        a.button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        button.cta,
+        a.button.cta {
+            @apply text-blue-700 bg-white;
+            border: 2px solid white;
+        }
+
+        button.cta {
+
+            &:focus,
+            &:hover,
+            a.button.cta:focus,
+            a.button.cta:hover {
+                background: #f2f2f2;
+            }
+        }
+
+        a.button.cta {
+
+            &:focus,
+            &:hover {
+                background: #f2f2f2;
+            }
+        }
+    }
+
+    li.active {
+        a {
+            @apply text-white font-medium;
+
+            &:before {
+                @apply absolute w-full left-0 top-0 py-0 px-4 bg-white;
+                content: '';
+                height: 3px;
+                margin-left: -1rem;
+                margin-top: -2rem;
+            }
+        }
+
+        a.button {
+            @apply p-4;
+            border: 2px solid white;
+            border-radius: 4px;
+        }
+
+        a.button.cta {
+            @apply bg-white text-blue-700;
+            border: 2px solid white;
+        }
+    }
+}
+
+.nav-close {
+    @apply fixed left-0 top-0 w-full h-full hidden;
+    z-index: 350;
+    background: rgba(37, 40, 43, 0.9);
+}
+
+.menu-active .nav-header .nav-wrapper-control {
+    @apply text-white bg-blue-700;
+
+    a:focus,
+    a:hover {
+        color: #e1e3e6;
+    }
+}
+
+.nav-meta li {
+    a {
+        font-size: 1.75em;
+    }
+
+    span {
+        @apply hidden;
+    }
+}
+
+.mobile-logo {
+    a {
+        @apply py-6 px-0;
+    }
+
+    img {
+        @apply w-full;
+        max-width: 300px;
+    }
+}
+
+.menu-active .mobile-logo {
+    @apply hidden;
+}
+
+.has-search .nav-meta li.nav-search {
+    display: block !important;
+}
+
+.nav-header li {
+    a {
+        @apply block py-4 px-0 leading-8 text-white whitespace-nowrap no-underline font-normal cursor-pointer;
+        font-size: 1.6em;
+        text-overflow: ellipsis;
+        transition: color linear 0.1s;
+
+        &:focus,
+        &:hover {
+            @apply text-white;
+        }
+    }
+}
+
+.nav-sign-up {
+    @apply ml-8;
+}
+
+.nav-meta li {
+    @apply mr-6;
+}
+
+.has-search .nav-wrapper-control .nav-search {
+    display: block !important;
+}
+
+.cover-active .nav-wrapper-control a {
+    color: rgba(255, 255, 255, 0.8);
+
+    &:focus,
+    &:hover {
+        @apply text-white;
+    }
+}
+
+.nav-features {
+    @apply ml-auto;
+}
+
+// Media Queries - Max Width 960px
+@media only screen and (max-width: 960px) {
+    .nav-header {
+        transform: translate3d(0, -100%, 0);
+
+        .nav-wrapper-control {
+            @apply block text-right;
+        }
+
+        .nav-wrapper {
+            @apply bg-blue-700 flex-col;
+        }
+
+        .logo {
+            @apply hidden;
+        }
+
+        ul {
+            @apply flex-col flex-shrink-0 py-8 px-0;
+        }
+
+        ul.nav-meta {
+            @apply w-full p-0;
+            flex-direction: row !important;
+        }
+
+        li {
+            @apply mr-0;
+
+            button,
+            a.button {
+                @apply py-4 px-0 mt-4 mb-0 mx-0;
+            }
+
+            a {
+                @apply pl-0 text-center;
+                font-size: 1.8em;
+
+                &:before {
+                    @apply absolute left-0 top-2/4 bg-transparent hidden;
+                    content: '';
+                    width: 1.5rem;
+                    height: 2px;
+                    margin-left: 6px;
+                    margin-top: -1px;
+                    border-radius: 2px;
+                }
+            }
+        }
+
+        li.active {
+            @apply mr-0;
+
+            a {
+                @apply text-white;
+
+                &:before {
+                    @apply w-0 hidden;
+                }
+            }
+        }
+    }
+
+    .menu-active .nav-close {
+        @apply block;
+    }
+
+    .nav-features {
+        @apply ml-0;
+    }
+
+    .nav-sign-up {
+        @apply ml-0;
+    }
+}
+
+// Media Queries - Max Width 640px
+@media only screen and (max-width: 640px) {
+
+    .nav-header li a:focus,
+    .nav-header li a:hover {
+        @apply text-white;
+    }
+
+    .nav-meta {
+        li {
+            @apply flex-grow;
+        }
+
+        li.nav-twitter,
+        li.nav-facebook {
+            @apply hidden;
+        }
+    }
+
+    .has-search .nav-meta li.nav-search {
+        display: none !important;
+    }
+
+    .cover-active .nav-header {
+        li.active a {
+            @apply text-white;
+        }
+
+        li {
+
+            a,
+            button:not(.cta) {
+                @apply text-white border-white;
+
+                a:focus,
+                a:hover,
+                button:not(.cta):focus,
+                button:not(.cta):hover {
+                    @apply text-white border-white;
+                }
+
+                button.cta {
+                    @apply text-white bg-white;
+                }
+
+                button.cta:focus,
+                button.cta:hover {
+                    @apply bg-white;
+                }
+            }
+        }
+    }
+}
+
+// Color Scheme - Dark Disable
+@media (prefers-color-scheme: darkdisabled) {
+    .nav-close {
+        background: rgba(9, 10, 13, 0.9);
+    }
+
+    .nav-header {
+        .nav-wrapper-control {
+            @apply text-white;
+
+            a:focus,
+            a:hover {
+                @apply text-white;
+            }
+        }
+
+        li.active a {
+            @apply text-white;
+        }
+
+        li a {
+            @apply text-white;
+
+            &:focus,
+            &:hover {
+                @apply text-white;
+            }
+        }
+    }
+}
+
+// 
+@supports (-webkit-backdrop-filter: blur(2rem)) {
+    .menu-active .nav-header .nav-wrapper-control {
+        background: rgba(34, 36, 38, 0.9);
+        -webkit-backdrop-filter: blur(2rem);
+    }
+}
