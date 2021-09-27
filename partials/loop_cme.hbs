@@ -1,0 +1,60 @@
+<div class="extra-pagination">
+	{{pagination}}
+</div>
+<div class="innerwide">
+	<div class="cols-3">
+		{{#foreach posts limit="24"}}
+				<div class="col">
+					<article class="{{post_class}} my-3">
+							<div class="mb-2">
+								{{#if feature_image}}
+										<a href="{{url}}"><img src="{{img_url feature_image}}" style="max-width: 100%;" /></a>
+								{{else}}
+										<a href="{{url}}"><img src="{{asset 'images/jacks-pattern-800x600.png'}}" style="width: 100%; max-width: 100%;" /></a>
+								{{/if}}
+							</div>
+							<div>
+								<h2 class="post-title mt-1"><a href="{{url}}">{{{title}}}</a></h2>
+							</div>
+							<div class="content-marketing-example-metrics cme-small">
+				        {{#has tag="#cme-metrics-seo-10k-sessions"}}
+				          <img src="{{asset 'images/cme/strong-organic-traffic-10000.png'}}" />
+				        {{else has tag="#cme-metrics-seo-1k-sessions"}}
+				          <img src="{{asset 'images/cme/strong-organic-traffic-1000.png'}}" />
+				        {{/has}}
+
+				        {{#has tag="#cme-metrics-links-100-domains"}}
+				          <img src="{{asset 'images/cme/strong-links-100-referring-domains.png'}}" />
+				        {{else has tag="#cme-metrics-links-10-domains"}}
+				          <img src="{{asset 'images/cme/strong-links-10-referring-domains.png'}}" />
+				        {{/has}}
+
+				        {{#has tag="#cme-metrics-strong-facebook-performance"}}
+				          <img src="{{asset 'images/cme/strong-social-performance-facebook.png'}}" />
+				        {{/has}}
+				        {{#has tag="#cme-metrics-strong-twitter-performance"}}
+				          <img src="{{asset 'images/cme/strong-social-performance-twitter.png'}}" />
+				        {{/has}}
+				        {{#has tag="#cme-metrics-strong-pinterest-performance"}}
+				          <img src="{{asset 'images/cme/strong-social-performance-pinterest.png'}}" />
+				        {{/has}}
+				        {{#has tag="#cme-metrics-strong-linkedin-performance"}}
+				          <img src="{{asset 'images/cme/strong-social-performance-linkedin.png'}}" />
+				        {{/has}}
+				        {{#has tag="#cme-metrics-great-storytelling"}}
+				          <img src="{{asset 'images/cme/great-examples-storytelling.png'}}" />
+				        {{/has}}
+				        {{#has tag="#cme-metrics-full-funnel-content"}}
+				          <img src="{{asset 'images/cme/great-examples-full-funnel-content.png'}}" />
+				        {{/has}}
+				        {{#has tag="#cme-metrics-evergreen-content"}}
+				          <img src="{{asset 'images/cme/great-examples-evergreen-content.png'}}" />
+				        {{/has}}
+					    </div>
+					</article>
+				</div>
+		{{/foreach}}
+	</div>
+</div>
+
+{{pagination}}

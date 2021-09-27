@@ -1,0 +1,23 @@
+<div class="nav-header">
+	<nav class="nav-wrapper" aria-label="{{t "Main"}}">
+			{{#if @site.logo}}
+			<span class="logo">
+				<a href="{{@site.url}}" title="{{t "Home"}}"><img src="{{@site.logo}}" alt="{{t "Logo"}}" /></a>
+			</span>
+			{{/if}}
+			{{> navigation}}
+	</nav>
+
+	<div class="nav-wrapper-control">
+		<div class="inner align-items-center">
+			{{#if @site.logo}}
+			<span class="mobile-logo">
+				<a href="{{@site.url}}" title="{{t "Home"}}"><img src="{{@site.logo}}" alt="{{t "Logo"}}" /></a>
+			</span>
+			{{/if}}
+			<a class="nav-menu" role="button"><i class="icon icon-menu" aria-hidden="true"></i>{{t "Menu"}}</a>
+			<a class="nav-search" style="display: none;" title="{{t "Search"}}" role="button"><i class="icon icon-search" aria-hidden="true"></i></a>
+		</div>
+	</div>
+</div>
+<div class="nav-close" role="button" aria-label="{{t "Close"}}"></div>

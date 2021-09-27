@@ -1,0 +1,151 @@
+<div class="cols-3 wide mb-2">
+  <div class="col-2">
+    <img src="{{img_url feature_image}}" />
+  </div>
+  <div class="col">
+    {{#if custom_excerpt}}
+      <p><strong>Overview:</strong><br>{{custom_excerpt}}</p>
+    {{/if}}
+    <h3 class="text-center">Notable Content Performance Metrics:</h3>
+    <div class="content-marketing-example-metrics">
+
+        {{#has tag="#cme-metrics-seo-10k-sessions"}}
+          <img src="{{asset 'images/cme/strong-organic-traffic-10000.png'}}" />
+        {{else has tag="#cme-metrics-seo-1k-sessions"}}
+          <img src="{{asset 'images/cme/strong-organic-traffic-1000.png'}}" />
+        {{/has}}
+
+        {{#has tag="#cme-metrics-links-100-domains"}}
+          <img src="{{asset 'images/cme/strong-links-100-referring-domains.png'}}" />
+        {{else has tag="#cme-metrics-links-10-domains"}}
+          <img src="{{asset 'images/cme/strong-links-10-referring-domains.png'}}" />
+        {{/has}}
+
+        {{#has tag="#cme-metrics-strong-facebook-performance"}}
+          <img src="{{asset 'images/cme/strong-social-performance-facebook.png'}}" />
+        {{/has}}
+        {{#has tag="#cme-metrics-strong-twitter-performance"}}
+          <img src="{{asset 'images/cme/strong-social-performance-twitter.png'}}" />
+        {{/has}}
+        {{#has tag="#cme-metrics-strong-pinterest-performance"}}
+          <img src="{{asset 'images/cme/strong-social-performance-pinterest.png'}}" />
+        {{/has}}
+        {{#has tag="#cme-metrics-strong-linkedin-performance"}}
+          <img src="{{asset 'images/cme/strong-social-performance-linkedin.png'}}" />
+        {{/has}}
+        {{#has tag="#cme-metrics-great-storytelling"}}
+          <img src="{{asset 'images/cme/great-examples-storytelling.png'}}" />
+        {{/has}}
+        {{#has tag="#cme-metrics-full-funnel-content"}}
+          <img src="{{asset 'images/cme/great-examples-full-funnel-content.png'}}" />
+        {{/has}}
+        {{#has tag="#cme-metrics-evergreen-content"}}
+          <img src="{{asset 'images/cme/great-examples-evergreen-content.png'}}" />
+        {{/has}}
+    </div>
+  </div>
+</div>
+
+
+<div class="tile wide mb-2 p-1">
+  <div class="cols-3 content-marketing-tags">
+
+    <div class="col">
+      <h3 class="text-center">Content Formats:</h3>
+      <ul>
+        {{#has tag="#cme-format-blog-post"}}
+          <li>📄&nbsp;Blog Posts</li>
+        {{/has}}
+        {{#has tag="#cme-format-guide"}}
+          <li>📘&nbsp;Guides & Content Hubs</li>
+        {{/has}}
+        {{#has tag="#cme-format-infographics"}}
+          <li>📊&nbsp;Infographics & Data Visualization</li>
+        {{/has}}
+        {{#has tag="#cme-format-photography"}}
+          <li>📸&nbsp;Photography</li>
+        {{/has}}
+        {{#has tag="#cme-format-tools"}}
+          <li>🛠&nbsp;Tools & Calculators</li>
+        {{/has}}
+        {{#has tag="#cme-format-video"}}
+          <li>📼&nbsp;Video</li>
+        {{/has}}
+        {{#has tag="#cme-format-whitepaper-ebook"}}
+          <li>📑&nbsp;Whitepapers & eBooks</li>
+        {{/has}}
+        {{#has tag="#cme-format-microsites"}}
+          <li>🖥&nbsp;Microsites</li>
+        {{/has}}
+      </ul>
+    </div>
+
+    <div class="col">
+      <h3 class="text-center">Marketing Objectives:</h3>
+      <ul>
+        {{#has tag="#cme-marketing-objective-brand-awareness"}}
+          <li>📈&nbsp;Brand Awareness</li>
+        {{/has}}
+        {{#has tag="#cme-marketing-objective-cause-marketing"}}
+          <li>🎗&nbsp;Cause Marketing</li>
+        {{/has}}
+        {{#has tag="#cme-marketing-objective-link-acquisition"}}
+          <li>🔗&nbsp;Link Acquisition</li>
+        {{/has}}
+        {{#has tag="#cme-marketing-objective-engagement"}}
+          <li>👍&nbsp;Engagement & Consideration</li>
+        {{/has}}
+        {{#has tag="#cme-marketing-objective-conversion"}}
+          <li>💳&nbsp;Conversion</li>
+        {{/has}}
+        {{#has tag="#cme-marketing-objective-retention"}}
+          <li>🤩&nbsp;Retention</li>
+        {{/has}}
+      </ul>
+    </div>
+
+    <div class="col">
+      <h3 class="text-center">Industry / Business Model:</h3>
+      <ul>
+        {{#has tag="#cme-industry-b2b"}}
+          <li>👔&nbsp;B2B</li>
+        {{/has}}
+        {{#has tag="#cme-industry-b2c"}}
+          <li>👨‍👩‍&nbsp;B2C</li>
+        {{/has}}
+        {{#has tag="#cme-industry-automotive"}}
+          <li>🚘&nbsp;Automotive</li>
+        {{/has}}
+        {{#has tag="#cme-industry-consumer-services"}}
+          <li>👩‍🔧&nbsp;Consumer Services</li>
+        {{/has}}
+        {{#has tag="#cme-industry-ecommerce"}}
+          <li>📦&nbsp;eCommerce / DTC</li>
+        {{/has}}
+        {{#has tag="#cme-industry-home-garden"}}
+          <li>🏡&nbsp;Home & Garden</li>
+        {{/has}}
+        {{#has tag="#cme-industry-hospitality"}}
+          <li>🛎&nbsp;Hospitality</li>
+        {{/has}}
+        {{#has tag="#cme-industry-media"}}
+          <li>📺&nbsp;Media</li>
+        {{/has}}
+        {{#has tag="#cme-industry-non-profits"}}
+          <li>⛑&nbsp;Non-Profits</li>
+        {{/has}}
+        {{#has tag="#cme-industry-services"}}
+          <li>👩🏻&nbsp;Services</li>
+        {{/has}}
+        {{#has tag="#cme-industry-software"}}
+          <li>👩🏽‍💻&nbsp;Software</li>
+        {{/has}}
+        {{#has tag="#cme-industry-travel"}}
+          <li>✈️&nbsp;Travel</li>
+        {{/has}}
+      </ul>
+    </div>
+
+  </div>
+</div>
+<br>

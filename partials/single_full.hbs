@@ -1,0 +1,96 @@
+<div class="progress-container">
+	<span class="progress-bar"></span>
+</div>
+
+<header class="post-header">
+	<div class="inner">
+		<span class="post-info">
+      <span itemscope itemtype="https://schema.org/BreadcrumbList">
+        <span class="post-breadcrumbs">
+        	<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+							👉 <a href="{{@site.url}}/resources/" itemscope itemtype="https://schema.org/WebPage" itemprop="item"><span itemprop="name">Resources</span></a>
+							<meta itemprop="position" content="1" />
+					</span> &#62;
+					<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+	          {{#has tag="content marketing examples"}}
+	            💎 <a href="{{@site.url}}/content-marketing-examples/" itemscope itemtype="https://schema.org/WebPage" itemprop="item"><span itemprop="name">Content Marketing Examples</span></a>
+	          {{else has tag="articles"}}
+	            🧠 <a href="{{@site.url}}/blog/" itemscope itemtype="https://schema.org/WebPage" itemprop="item"><span itemprop="name">Articles</span></a>
+	          {{else has tag="docs"}}
+	            🎓 <a href="{{@site.url}}/docs/" itemscope itemtype="https://schema.org/WebPage" itemprop="item"><span itemprop="name">Knowledgebase</span></a>
+	          {{else has tag="updates"}}
+	            🆕 <a href="{{@site.url}}/updates/" itemscope itemtype="https://schema.org/WebPage" itemprop="item"><span itemprop="name">Product Updates</span></a>
+	          {{else}}
+	            <span itemprop="name">{{primary_tag.name}}</span>
+	          {{/has}}
+						<meta itemprop="position" content="2" />
+					</span>
+        </span>
+      </span>
+    </span>
+
+		<h1 class="post-title">{{{title}}}</h1>
+
+		<div class="post-meta">
+			<div class="post-meta-avatars">
+				{{#foreach authors}}
+					<figure class="post-meta-avatar avatar">
+						{{#if profile_image}}
+						<a href="{{url}}" class="author-avatar">
+								<img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+						</a>
+						{{/if}}
+					</figure>
+				{{/foreach}}
+			</div>
+			<h4 class="post-meta-author">{{authors separator=", "}}</h4>
+      📅&nbsp;<time title="Last Updated at" datetime="{{date updated_at format='DD-MM-YYYY'}}">{{date updated_at format="MMMM DD, YYYY"}}</time> &nbsp;&nbsp; ⏱&nbsp;{{reading_time minute=(t "1 min read") minutes=(t "% min read")}} <span class="ml-1">💬</span> <a href="#comments"><div id="fastcomments-widget-comment-count" class="d-inline"></div></a>
+			<script src="https://cdn.fastcomments.com/js/widget-comment-count.min.js"></script>
+			<script>
+			    FastCommentsCommentCount(document.getElementById('fastcomments-widget-comment-count'), {
+			        tenantId: 'R7qAwRilYB',
+			        urlId: null // Id that represents the page, if you didn't to tie comments to the page url. You should use the same value here as in the comment widget.
+			    });
+			</script>
+		</div>
+
+	</div>
+</header>
+
+<main class="content" role="main">
+	<article class="{{post_class}}">
+		<div class="inner">
+
+			<section class="post-content">
+
+				{{#has tag="content marketing examples"}}
+					{{> content_marketing_examples_metrics}}
+        {{/has}}
+
+				{{content}}
+
+			</section>
+
+			<section class="post-footer">
+
+				{{> post_sharing}}
+
+				{{> author_box}}
+
+				{{> comments}}
+
+			</section>
+
+			{{> cta_box}}
+
+
+
+			{{> prev_next_posts}}
+
+			{{> related_posts}}
+
+			{{> shoutout}}
+
+		</div>
+	</article>
+</main>

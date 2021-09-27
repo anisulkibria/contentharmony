@@ -1,0 +1,50 @@
+<div class="progress-container">
+	<span class="progress-bar"></span>
+</div>
+
+<header class="post-header">
+	<div class="inner">
+		<span class="post-info">
+
+		</span>
+
+		<span class="post-info">
+      <span class="post-breadcrumbs">
+				{{#has tag="features"}}
+					👉 <a href="{{site.url}}/product/">Product</a>
+				{{else has tag="product"}}
+					👉 <a href="{{site.url}}/product/">Product</a>
+				{{else has tag="resources"}}
+					👉 <a href="{{site.url}}/resources/">Resources</a>
+				{{else}}
+					👉 {{primary_tag.name}}
+				{{/has}}
+      </span>
+    </span>
+		<h1 class="post-title">{{{title}}}</h1>
+
+	</div>
+</header>
+
+<main class="content" role="main">
+	<article class="{{post_class}}">
+		<div class="inner">
+
+			<section class="post-content">
+
+				{{content}}
+
+			</section>
+
+			<section class="post-footer">
+
+			{{> post_sharing}}
+
+			</section>
+
+			{{> cta_box}}
+
+
+		</div>
+	</article>
+</main>

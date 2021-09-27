@@ -1,0 +1,37 @@
+<hr>
+<section class="author-box">
+  <div class="cols-3 author-content">
+    <div class="col author-picture">
+        {{#if primary_author.profile_image}}
+          <img src="{{primary_author.profile_image}}" class="circle">
+        {{else}}
+          <img src="{{asset "images/default-avatar-square-small.jpg"}}" class="circle">
+        {{/if}}
+    </div>
+    <div class="col-2 author-info">
+      <h4 class="author-name">
+        {{primary_author.name}}
+      </h4>
+
+      {{#if primary_author.bio}}
+        <p class="author-bio">{{primary_author.bio}}</p>
+      {{/if}}
+
+      <p class="author-links">
+        {{#if primary_author.website}}
+          <strong>Website:</strong>&nbsp;<a href="{{primary_author.website}}" target="_blank" rel="noopener" aria-label="{{t "Website"}}" class="mr-3"><span class="icon-globe" aria-hidden="true"></span></a>
+        {{/if}}
+        {{#if primary_author.twitter}}
+          <strong>Twitter:</strong>&nbsp;<a href="https://twitter.com/{{primary_author.twitter}}" target="_blank" rel="noopener" aria-label="Twitter">{{primary_author.twitter}}</a>
+        {{/if}}
+      </p>
+      {{#has author="count:>1"}}
+        <hr>
+        <p class="small-text in-author-along-with">
+          {{authors separator=", " prefix=(t "This post features additional contributions from ") from="2"}}
+        </p>
+
+      {{/has}}
+    </div>
+  </div>
+</section>
