@@ -1,0 +1,104 @@
+{{!< default}}
+<header class="post-header">
+  <div class="inner">
+    <h1 class="post-title">📚 Content Marketing Resources</h1>
+    <h2 class="blog-description">From help docs to conference talks, we've got what you need.</h2>
+  </div>
+</header>
+
+<div id="index" class="container">
+
+    <main class="content" role="main">
+      <article class="post no-image page">
+        <div class="inner">
+
+          <section class="post-content">
+            <div class="cols-2 wide">
+              <div class="col">
+                <div class="tile">
+                  <h2 class="text-center">🎓 <a href="{{@site.url}}/docs/">Knowledgebase</a></h2>
+                  <p class="mb-0">Helpful articles and videos on how to use Content Harmony.</p>
+                  <hr>
+                  <p class="mb-0"><strong>Top Docs:</strong></p>
+                  <ul>
+                    <li><a href="{{@site.url}}/docs/quick-start-guide-video/">Quick Start Guide (5-Min Video)</a></li>
+                    <li><a href="{{@site.url}}/docs/how-to-build-content-briefs-using-content-harmony/">How To Build Great Briefs (30-Min Video)</a></li>
+                  </ul>
+                  <p class="mb-0"><strong>Latest Docs:</strong></p>
+                  {{#get "posts" filter="tag:docs" limit="2"}}
+                  <ul>
+                    {{#foreach posts}}
+                    <li><a href="{{url}}">{{title}}</a></li>
+                    {{/foreach}}
+                  </ul>
+                  {{/get}}
+                </div>
+
+              </div>
+              <div class="col">
+                <div class="tile">
+                  <h2 class="text-center">🆕 <a href="{{@site.url}}/updates/">Product Updates</a></h2>
+                  <p class="mb-0">The latest features and improvements to Content Harmony.</p>
+                  <hr>
+                  <p class="mb-0"><strong>Latest Product Updates:</strong></p>
+                  {{#get "posts" filter="tag:updates" limit="4"}}
+                  <ul>
+                    {{#foreach posts}}
+                    <li><a href="{{url}}">{{title}}</a></li>
+                    {{/foreach}}
+                  </ul>
+                  {{/get}}
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="cols-2 wide">
+              <div class="col">
+                <div class="tile">
+                  <h2 class="text-center">🧠 <a href="{{@site.url}}/blog/">Blog Posts</a></h2>
+                  <p>Posts & guides on becoming a better content marketer.</p>
+                  <hr>
+                  <p class="mb-0"><strong>Latest Posts:</strong></p>
+                  {{#get "posts" filter="tag:blog" limit="6"}}
+                  <ul>
+                    {{#foreach posts}}
+                    <li><a href="{{url}}">{{title}}</a></li>
+                    {{/foreach}}
+                  </ul>
+                  {{/get}}
+                </div>
+
+
+              </div>
+              <div class="col">
+                <div class="tile">
+                  <h2 class="text-center">💎 <a href="{{@site.url}}/content-marketing-examples/">Content Marketing Examples</a></h2>
+                  <p>Great content we've spotted in the wild, and breakdowns on why we like it.</p>
+                  <hr>
+                  <p class="mb-0"><strong>Latest Content Marketing Examples:</strong></p>
+                  {{#get "posts" filter="tag:content-marketing-examples" limit="6"}}
+                  <ul>
+                    {{#foreach posts}}
+                    <li><a href="{{url}}">{{title}}</a></li>
+                    {{/foreach}}
+                  </ul>
+                  {{/get}}
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+    			{{> cta_box}}
+
+					<div class="d-none" style="display: none;">
+						{{{loop}}}
+					</div>
+
+        </div>
+      </article>
+    </main>
+
+  </div>
