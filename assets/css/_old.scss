@@ -1216,22 +1216,8 @@ hr.small {
 /* ==========================================================================
 	 Columns - Added by Kane
 	 ========================================================================== */
-// .flex, .cols-2, .cols-3, .cols-4, .cols-5, .cols-6
-.cols-2, .cols-3, .cols-4, .cols-5, .cols-6 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  align-items: stretch; }
 
-.align-items-top {
-  align-items: flex-start; }
-
-.align-items-center {
-  align-items: center; }
-
-.wide {
+  .wide {
   max-width: calc(72rem + 24vw) !important;
   min-width: 100%;
   width: calc(100vw - 4rem); }
@@ -1240,113 +1226,137 @@ hr.small {
       max-width: 100%;
       min-width: 100%;
       width: 100%; } }
+// .flex, .cols-2, .cols-3, .cols-4, .cols-5, .cols-6
+// .cols-2, .cols-3, .cols-4, .cols-5, .cols-6 {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   margin-top: 2rem;
+//   margin-bottom: 2rem;
+//   align-items: stretch; }
 
-.col, .col-1, .col-2, .col-3 {
-  padding: 1rem; }
+// .align-items-top {
+//   align-items: flex-start; }
 
-.cols-2 .col, .cols-2 .col-1 {
-  width: 47%; }
-  @media only screen and (max-width: 640px) {
-    .cols-2 .col, .cols-2 .col-1 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .align-items-center {
+//   align-items: center; }
 
-.cols-3 .col, .cols-3 .col-1 {
-  width: 31%; }
-  @media only screen and (max-width: 640px) {
-    .cols-3 .col, .cols-3 .col-1 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .wide {
+//   max-width: calc(72rem + 24vw) !important;
+//   min-width: 100%;
+//   width: calc(100vw - 4rem); }
+//   @media only screen and (max-width: 640px) {
+//     .wide {
+//       max-width: 100%;
+//       min-width: 100%;
+//       width: 100%; } }
 
-.cols-3 .col-2 {
-  width: 62%; }
-  @media only screen and (max-width: 640px) {
-    .cols-3 .col-2 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .col, .col-1, .col-2, .col-3 {
+//   padding: 1rem; }
 
-.cols-4 .col, .cols-4 .col-1 {
-  width: 22%; }
-  @media only screen and (max-width: 640px) {
-    .cols-4 .col, .cols-4 .col-1 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .cols-2 .col, .cols-2 .col-1 {
+//   width: 47%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-2 .col, .cols-2 .col-1 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
 
-.cols-4 .col-2 {
-  width: 46%; }
-  @media only screen and (max-width: 640px) {
-    .cols-4 .col-2 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .cols-3 .col, .cols-3 .col-1 {
+//   width: 31%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-3 .col, .cols-3 .col-1 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
 
-.cols-4 .col-3 {
-  width: 70%; }
-  @media only screen and (max-width: 640px) {
-    .cols-4 .col-3 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .cols-3 .col-2 {
+//   width: 62%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-3 .col-2 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
 
-.cols-5 .col, .cols-5 .col-1 {
-  width: 18%; }
-  @media only screen and (max-width: 640px) {
-    .cols-5 .col, .cols-5 .col-1 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .cols-4 .col, .cols-4 .col-1 {
+//   width: 22%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-4 .col, .cols-4 .col-1 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
 
-.cols-5 .col-2 {
-  width: 36%; }
-  @media only screen and (max-width: 640px) {
-    .cols-5 .col-2 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .cols-4 .col-2 {
+//   width: 46%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-4 .col-2 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
 
-.cols-5 .col-3 {
-  width: 54%; }
-  @media only screen and (max-width: 640px) {
-    .cols-5 .col-3 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .cols-4 .col-3 {
+//   width: 70%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-4 .col-3 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
 
-.cols-6 .col, .cols-6 .col-1 {
-  width: 14%; }
-  @media only screen and (max-width: 640px) {
-    .cols-6 .col, .cols-6 .col-1 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .cols-5 .col, .cols-5 .col-1 {
+//   width: 18%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-5 .col, .cols-5 .col-1 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
 
-.cols-6 .col-2 {
-  width: 28%; }
-  @media only screen and (max-width: 640px) {
-    .cols-6 .col-2 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .cols-5 .col-2 {
+//   width: 36%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-5 .col-2 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
 
-.cols-6 .col-3 {
-  width: 42%; }
-  @media only screen and (max-width: 640px) {
-    .cols-6 .col-3 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .cols-5 .col-3 {
+//   width: 54%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-5 .col-3 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
 
-.cols-6 .col-4 {
-  width: 56%; }
-  @media only screen and (max-width: 640px) {
-    .cols-6 .col-4 {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 1rem 0; } }
+// .cols-6 .col, .cols-6 .col-1 {
+//   width: 14%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-6 .col, .cols-6 .col-1 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
+
+// .cols-6 .col-2 {
+//   width: 28%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-6 .col-2 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
+
+// .cols-6 .col-3 {
+//   width: 42%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-6 .col-3 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
+
+// .cols-6 .col-4 {
+//   width: 56%; }
+//   @media only screen and (max-width: 640px) {
+//     .cols-6 .col-4 {
+//       width: 100%;
+//       flex-shrink: 0;
+//       padding: 1rem 0; } }
 
 /* ==========================================================================
     Misc
