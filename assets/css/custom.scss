@@ -1,9 +1,12 @@
-.home-template .cols-2 {
-    @apply grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-4;
+.cols-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-8;
 }
-.home-template .cols-3 {
+.cols-3 {
     @apply grid grid-cols-1 md:grid-cols-3 grid-flow-row gap-16;
 }
-.home-template .cols-4 {
+.home-template .cols-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-16;
+}
+.cols-4 {
     @apply wide grid grid-cols-1 md:grid-cols-4 grid-flow-row gap-16;
 }
