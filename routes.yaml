@@ -1,0 +1,61 @@
+routes:
+  /:
+    template: home
+    data: page.home
+
+collections:
+  /blog/:
+    permalink: /blog/{slug}/
+    filter: primary_tag:blog
+    data: tag.blog
+  /product/:
+    permalink: /product/{slug}/
+    filter: primary_tag:product
+    data: tag.product
+  /updates/:
+    permalink: /updates/{slug}/
+    filter: primary_tag:updates
+    data: tag.updates
+  /docs/:
+    permalink: /docs/{slug}/
+    filter: primary_tag:docs
+    data: tag.docs
+  /content-marketing-examples/:
+    permalink: /content-marketing-examples/{slug}/
+    filter: primary_tag:content-marketing-examples
+    data: tag.content-marketing-examples
+  /services/:
+    permalink: /services/{slug}/
+    filter: primary_tag:services
+    data: tag.services
+  /careers/:
+    permalink: /careers/{slug}/
+    filter: primary_tag:careers
+    data: tag.careers
+  /team/:
+    permalink: /team/{slug}/
+    filter: primary_tag:team
+    data: tag.team
+  /tools/:
+    permalink: /tools/{slug}/
+    filter: primary_tag:tools
+    data: tag.tools
+  /videos/:
+    permalink: /videos/{slug}/
+    filter: primary_tag:videos
+    data: tag.videos
+  /offers/:
+    permalink: /offers/{slug}/
+    filter: primary_tag:offers
+    data: tag.offers
+  /resources/:
+    permalink: /resources/{slug}/
+    filter: primary_tag:resources
+    data: tag.resources
+  /helps/:
+    permalink: /helps/{slug}/
+    filter: primary_tag:helps
+    data: tag.helps
+
+taxonomies:
+  author: /author/{slug}/
