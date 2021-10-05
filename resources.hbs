@@ -1,4 +1,6 @@
 {{!< default}}
+{{!-- Header section --}}
+{{> header}}
 <header class="post-header">
   <div class="inner">
     <h1 class="post-title">📚 Content Marketing Resources</h1>
@@ -6,14 +8,14 @@
   </div>
 </header>
 
-<div id="index" class="container">
+<div id="index" class="main-content">
 
     <main class="content" role="main">
       <article class="post no-image page">
         <div class="inner">
 
           <section class="post-content">
-            <div class="cols-2 wide">
+            <div class="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-16 wide">
               <div class="col">
                 <div class="tile">
                   <h2 class="text-center">🎓 <a href="{{@site.url}}/docs/">Knowledgebase</a></h2>
@@ -54,7 +56,7 @@
               </div>
             </div>
 
-            <div class="cols-2 wide">
+            <div class="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-16 wide mt-20">
               <div class="col">
                 <div class="tile">
                   <h2 class="text-center">🧠 <a href="{{@site.url}}/blog/">Blog Posts</a></h2>
