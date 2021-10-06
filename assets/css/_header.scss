@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.blog-header {
+    @apply relative hidden;
+    padding: calc(12rem + 2vw) 0 calc(1rem + 1vw);
+    margin-bottom: calc(4rem + 2vw);
+    background: var(--ch-blue);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.blog-header .post-title {
+    @apply text-white;
+}
+
+.blog-box {
+    @apply relative z-10 text-center;
+    padding-bottom: calc(4rem + 2vw);
+}
+
+.blog-cover {
+    @apply absolute w-full h-full left-0 top-0 flex items-center;
+    z-index: 5;
+    background: no-repeat scroll center center / cover #000;
+    animation: 0.5s ease-in forwards fadein;
+}
+
+.blog-cover:after {
+    @apply absolute w-full left-0 bottom-0 h-2/3;
+    content: "";
+    z-index: 8;
+    background: -webkit-linear-gradient(top,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.333) 100%);
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.333) 100%);
+}
+
+.blog-cover img {
+    @apply relative block w-full h-full m-0 object-cover;
+    z-index: 6;
+}
+
+.blog-name {
+    @apply block m-0 p-0 font-bold no-underline text-white;
+    font-size: 6em;
+    line-height: 1em;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+    .blog-name {
+        @apply text-white;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .blog-name {
+        font-size: 4rem;
+    }
+}
+
+.blog-description {
+    @apply block mt-4 p-0 text-white;
+    font-family: var(--font-secondary);
+    font-size: 3em;
+    line-height: 1.33334em;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+    .blog-description {
+        @apply text-white;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .blog-description {
+        font-size: 2rem;
+    }
+}
+
+.archive {
+    @apply relative z-10;
+}
+
+.archive.archive-box {
+    padding-bottom: calc(4rem + 2vw);
+}
+
+.archive .archive-info {
+    @apply flex mb-2;
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.archive .archive-info .archive-type {
+    @apply text-white;
+}
+
+.archive .archive-info .archive-count {
+    @apply relative ml-12 text-white;
+}
+
+.archive .archive-info .archive-count:after {
+    @apply absolute -left-8 w-4 top-2/4;
+    content: "";
+    height: 1px;
+    background: #c4c7cc;
+}
+
+.archive .archive-title {
+    @apply my-4 mx-0 text-white;
+    font-size: 4em;
+    line-height: 1em;
+}
+
+.archive .archive-description {
+    @apply block my-4 mx-0 text-white;
+    font-size: 2em;
+    line-height: 1.5em;
+    font-family: var(--font-secondary);
+}
+
+.archive .archive-links {
+    @apply block mt-4;
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+.archive .archive-links a {
+    @apply text-white;
+    transition: color linear 0.1s;
+}
+
+.archive .archive-links a:focus,
+.archive .archive-links a:hover {
+    @apply text-white;
+}
+
+.archive.archive-author {
+    @apply pl-64;
+}
+
+@media only screen and (max-width: 640px) {
+    .archive.archive-author {
+        @apply pl-0 pr-40;
+    }
+}
+
+.archive.archive-author .archive-avatar {
+    @apply absolute top-0 left-8 w-40 h-40 hidden;
+    border-radius: 8rem;
+}
+
+@media only screen and (max-width: 640px) {
+    .archive.archive-author .archive-avatar {
+        @apply left-auto right-0 top-8 w-32 h-32;
+    }
+}
+
+.page-wrapper {
+    @apply flex flex-col relative pr-0;
+    min-height: 100vh;
+}
+
+.inner {
+    @apply my-0 mx-auto py-0 px-32;
+    max-width: calc(64rem + 8vw);
+}
+
+@media only screen and (max-width: 640px) {
+    .inner {
+        @apply py-0 px-12;
+    }
+}
+
+.innerwide {
+    @apply my-0 mx-auto py-0 px-12;
+    max-width: 1200px;
+}
