@@ -1,150 +1,330 @@
-/* --------------------------------------------------
-#   Bookmark Card
--------------------------------------------------- */
-.kg-bookmark-card {
+/* ==========================================================================
+   KG Cards
+   ========================================================================== */
+   .post-content figure figcaption {
     position: relative;
-}
-.kg-bookmark-publisher {
-    position: relative;
-}
-.kg-bookmark-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    color: currentColor; 
-    background: #ffffff;
-    font-family: "Inter ui", sans-serif;
-    text-decoration: none;
-    border-radius: 12px;
-    overflow: hidden;
-}
-.content a.kg-bookmark-container {
-    color: #000000;
-    font-weight: 400;
-    text-decoration: none;
-    &:hover {
-        color: #000000;
-        .kg-bookmark-title {
-            color: #5e57e3;
-        }
+    color: #73777d;
+    max-width: calc(64rem + 8vw);
+    margin: auto;
+    font-size: 0.75em;
+    line-height: 2em;
+    padding: 2rem 0;
+  }
+  
+  @media (prefers-color-scheme: darkdisabled) {
+    .post-content figure figcaption {
+      color: #909499;
     }
-}
-.kg-bookmark-content {
-    flex-basis: 0;
-    flex-grow: 999;
-    padding: 20px;
-    order: 1;
-}
-.kg-bookmark-title {
-    font-weight: 600;
-    font-size: 1.2rem;
-    line-height: 1.3em;
-}
-.kg-bookmark-description {
-    display: -webkit-box;
-    margin: 0.5em 0 0 0;
-    overflow: hidden;
-    opacity: 0.8;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-.kg-bookmark-metadata {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-top: 1.25rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.kg-bookmark-icon {
-    display: inline-block;
-    height: 1rem;
-    margin-right: 0.6rem;
-    width: 1rem;
-}
-.kg-bookmark-thumbnail {
-    display: block;
-    flex-basis: 16rem;
-    flex-grow: 1;
-    justify-content: flex-end;
-    img {
-        border-radius: 12px;
-        max-width: 100%;
-        height: auto;
-        min-height: 200px;
-        vertical-align: bottom;
-        object-fit: cover;
+  }
+  
+  .post-content figure figcaption:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 8rem;
+    height: 1px;
+    background: #e1e3e6;
+  }
+  
+  @media (prefers-color-scheme: darkdisabled) {
+    .post-content figure figcaption:after {
+      background: #3b3d40;
     }
-}
-.kg-card {
-    img {
-        border-radius: 0;
+  }
+  
+  .post-content figure figcaption a {
+    box-shadow: inset 0 -1px 0 #e1e3e6;
+  }
+  
+  @media (prefers-color-scheme: darkdisabled) {
+    .post-content figure figcaption a {
+      box-shadow: inset 0 -1px 0 #3b3d40;
     }
-    .kg-bookmark-thumbnail img {
-        border-radius: 0;
+  }
+  
+  .post-content figure figcaption a:focus,
+  .post-content figure figcaption a:hover {
+    box-shadow: inset 0 -2px 0 #e1e3e6;
+  }
+  
+  @media (prefers-color-scheme: darkdisabled) {
+    .post-content figure figcaption a:focus,
+    .post-content figure figcaption a:hover {
+      box-shadow: inset 0 -2px 0 #3b3d40;
     }
-}
-.kg-bookmark-author {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-.kg-image-card img,
-.kg-gallery-image img {
-    height: auto;
-    max-width: 100%;
+  }
+  
+  .post-content .kg-image-card {
+    margin: 0 0 4rem;
+    max-width: none !important;
+  }
+  
+  .post-content .kg-image-card.kg-width-wide {
+    max-width: calc(72rem + 24vw) !important;
+    min-width: 100%;
+    width: calc(100vw - 4rem);
+  }
+  
+  .post-content .kg-image-card.kg-width-wide figcaption {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  
+  @media only screen and (max-width: 640px) {
+    .post-content .kg-image-card.kg-width-wide figcaption {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  .post-content .kg-image-card.kg-width-wide figcaption:after {
+    margin-left: 6rem;
+  }
+  
+  @media only screen and (max-width: 640px) {
+    .post-content .kg-image-card.kg-width-wide figcaption:after {
+      margin-left: 2rem;
+    }
+  }
+  
+  .post-content .kg-image-card.kg-width-full {
+    max-width: none;
+    width: 100vw;
+    margin-top: 2em;
+  }
+  
+  .post-content .kg-image-card.kg-width-full figcaption {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  
+  @media only screen and (max-width: 640px) {
+    .post-content .kg-image-card.kg-width-full figcaption {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+  
+  .post-content .kg-image-card.kg-width-full figcaption:after {
+    margin-left: 8rem;
+  }
+  
+  @media only screen and (max-width: 640px) {
+    .post-content .kg-image-card.kg-width-full figcaption:after {
+      margin-left: 4rem;
+    }
+  }
+  
+  .post-content .kg-image-card .kg-image {
     margin: 0 auto;
-}
-.kg-width-full img {
-    border-radius: 0;
-    margin: 0.3rem auto;
-}
-.kg-bookmark-author:after {
-    content: "•";
-    margin: 0 6px;
-}
-figcaption {
-    padding: 0.5rem;
-    text-align: center;
-}
-/* --------------------------------------------------
-#   Image Gallery Card
--------------------------------------------------- */
-.kg-width-full .kg-image {
-    max-width: 100%;
-}
-.kg-width-wide {
-    max-width: 90%;
-    margin: 0 auto;
-}
-.kg-gallery-card + .kg-gallery-card {
-    margin-top: 0.75em;
-}
-.kg-gallery-container {
-    position: relative;
-}
-.kg-gallery-row {
+  }
+  
+  .post-content .kg-image-card .kg-image-full + figcaption {
+    margin-bottom: 1.33334em;
+  }
+  
+  .post-content .kg-gallery-card {
+    margin: 0 0 4rem;
+    max-width: calc(72rem + 24vw) !important;
+    min-width: 100%;
+    width: calc(100vw - 4rem);
+  }
+  
+  .post-content .kg-gallery-card figcaption {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  
+  @media only screen and (max-width: 640px) {
+    .post-content .kg-gallery-card figcaption {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  .post-content .kg-gallery-card figcaption:after {
+    margin-left: 6rem;
+  }
+  
+  @media only screen and (max-width: 640px) {
+    .post-content .kg-gallery-card figcaption:after {
+      margin-left: 2rem;
+    }
+  }
+  
+  .post-content .kg-gallery-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-content .kg-gallery-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-.kg-gallery-image img {
+  }
+  
+  .post-content .kg-gallery-image img {
     display: block;
     margin: 0;
     width: 100%;
     height: 100%;
-}
-.kg-gallery-row:not(:first-of-type) {
-    margin: 0.75em 0 0 0;
-}
-.kg-gallery-image:not(:first-of-type) {
+  }
+  
+  .post-content .kg-gallery-row:not(:first-of-type) {
+    margin: 0.75em 0 0;
+  }
+  
+  .post-content .kg-gallery-image:not(:first-of-type) {
     margin: 0 0 0 0.75em;
-}
-/* --------------------------------------------------
-#   KG Card Others
--------------------------------------------------- */
-.twitter-tweet iframe {
-    border-radius: 0;
-}
+  }
+  
+  .post-content .kg-embed-card {
+    margin: 0 0 4rem;
+  }
+  
+  .post-content .kg-embed-card > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .post-content .kg-code-card {
+    min-width: 100%;
+    margin: 0 0 4rem;
+  }
+  
+  .post-content .kg-code-card pre {
+    margin: 0;
+  }
+  
+  .post-content .kg-bookmark-card {
+    width: 100%;
+    margin: 0 0 4rem;
+  }
+  
+  .post-content .kg-bookmark-container {
+    display: flex;
+    text-decoration: none;
+    min-height: 8em;
+    background: #f7f8fa;
+    border: 1px solid #e1e3e6;
+    box-shadow: none !important;
+    overflow: hidden;
+  }
+  
+  @media (prefers-color-scheme: darkdisabled) {
+    .post-content .kg-bookmark-container {
+      background: #222426;
+      border-color: #3b3d40;
+    }
+  }
+  
+  .post-content .kg-bookmark-content {
+    text-rendering: optimizeLegibility;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-start;
+    justify-content: start;
+    padding: 1.5em;
+    color: #73777d;
+  }
+  
+  @media (prefers-color-scheme: darkdisabled) {
+    .post-content .kg-bookmark-content {
+      color: #909499;
+    }
+  }
+  
+  .post-content .kg-bookmark-title {
+    color: #222426;
+    font-size: 0.75em;
+    line-height: 1.66667em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  @media (prefers-color-scheme: darkdisabled) {
+    .post-content .kg-bookmark-title {
+      color: #e1e3e6;
+    }
+  }
+  
+  .post-content .kg-bookmark-description {
+    display: -webkit-box;
+    font-size: 0.75em;
+    line-height: 1.66667em;
+    font-weight: 400;
+    margin-top: 0.33334em;
+    max-height: 3.33334em;
+    overflow-y: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  .post-content .kg-bookmark-thumbnail {
+    position: relative;
+    min-width: 33%;
+    max-height: 100%;
+  }
+  
+  .post-content .kg-bookmark-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .post-content .kg-bookmark-metadata {
+    text-rendering: optimizeLegibility;
+    display: flex;
+    align-items: center;
+    font-size: 0.75em;
+    line-height: 1.66667em;
+    color: #222426;
+    font-weight: 400;
+    margin-top: 1em;
+    flex-wrap: wrap;
+  }
+  
+  @media (prefers-color-scheme: darkdisabled) {
+    .post-content .kg-bookmark-metadata {
+      color: #e1e3e6;
+    }
+  }
+  
+  .post-content .kg-bookmark-icon {
+    width: 1.33334em;
+    margin: 0 0.75em 0 0;
+  }
+  
+  .post-content .kg-bookmark-author:after {
+    content: "•";
+    margin: 0 0.33334em;
+  }
+  
+  .post-content .kg-bookmark-publisher {
+    color: var(--color-primary);
+  }
+  
+  @media (max-width: 640px) {
+    .post-content .kg-bookmark-container {
+      flex-direction: column;
+    }
+  
+    .post-content .kg-bookmark-thumbnail {
+      order: 1;
+      width: 100%;
+      min-height: 160px;
+    }
+  
+    .post-content .kg-bookmark-thumbnail img {
+      border-radius: 3px 3px 0 0;
+    }
+  
+    .post-content .kg-bookmark-content {
+      order: 2;
+    }
+  }
