@@ -1,9 +1,9 @@
 module.exports = {
     // purge: [],
-    purge: {
-      enabled: true,
-      content: ['*.hbs', 'partials/*.hbs'],
-    }, 
+    // purge: {
+    //   enabled: true,
+    //   content: ['*.hbs', 'partials/*.hbs'],
+    // }, 
     darkMode: false, // or 'media' or 'class'
     theme: {
       extend: {
