@@ -2,29 +2,21 @@
    Post
    ========================================================================== */
 .post-header {
-    @apply relative overflow-hidden;
-    padding: calc(12rem + 2vw) 0 calc(1rem + 1vw);
-    margin-bottom: calc(4rem + 2vw);
-    background: var(--ch-blue);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    @apply relative overflow-hidden bg-blue p-big mb-default text-shadow-default;
 }
 
 .post-cover {
-    @apply absolute w-full h-full left-0 top-0 flex items-center;
-    z-index: 5;
+    @apply absolute w-full h-full left-0 top-0 flex items-center z-5;
     background: no-repeat scroll center center / cover #000;
     animation: 0.5s ease-in forwards fadein;
 }
 
 .post-cover img {
-    @apply relative block w-full h-full m-0 object-cover;
-    z-index: 6;
+    @apply relative block w-full h-full m-0 object-cover z-6;
 }
 
 .post-cover:after {
-    @apply absolute w-full h-3/4 left-0 bottom-0;
-    content: "";
-    z-index: 8;
+    @apply absolute w-full h-3/4 left-0 bottom-0 z-8 no-content;
     background: -webkit-linear-gradient(top,
             rgba(0, 0, 0, 0) 0%,
             rgba(0, 0, 0, 0.333) 100%);
@@ -70,9 +62,9 @@
 
 @media only screen and (max-width: 960px) {
     .post-title {
+        @apply text-5xl;
         -webkit-hyphens: auto;
         hyphens: auto;
-        font-size: 3rem;
     }
 }
 
@@ -90,7 +82,7 @@
 
 @media only screen and (max-width: 960px) {
     .post-header .post-title {
-        font-size: 4rem;
+        @apply text-6xlp;
     }
 }
 
@@ -114,8 +106,7 @@
 }
 
 .post-header .post-meta:after {
-    @apply clear-both table;
-    content: "";
+    @apply clear-both table no-content;
 }
 
 .post-header .post-meta .post-meta-avatars {
@@ -123,8 +114,8 @@
 }
 
 .post-header .post-meta .post-meta-avatars:after {
+    @apply no-content;
     clear: both;
-    content: "";
     display: table;
 }
 
@@ -181,8 +172,7 @@
 }
 
 .post-footer:after {
-    @apply clear-both table;
-    content: "";
+    @apply clear-both table no-content;
 }
 
 .post-info-label {
@@ -373,11 +363,9 @@
 }
 
 .post-nav:after {
-    @apply absolute h-full left-1/2 top-0;
-    content: "";
+    @apply absolute h-full left-1/2 top-0 z-2 no-content;
     width: 1px;
     background: #e1e3e6;
-    z-index: 2;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -465,12 +453,10 @@
     }
 
     .post-nav-teaser:after {
-        @apply absolute w-full left-0 bottom-0 ;
-        content: "";
+        @apply absolute w-full left-0 bottom-0 z-2 no-content;
         height: 1px;
         margin-bottom: -1px;
         background: #e1e3e6;
-        z-index: 2;
     }
 }
 
@@ -481,8 +467,7 @@
 }
 
 .post-nav i {
-    @apply absolute top-2/4 w-16 h-16 -mt-8 text-center;
-    font-size: 4rem;
+    @apply absolute top-2/4 w-16 h-16 -mt-8 text-center text-6xlp;
     line-height: 4rem;
     transition: all ease-out 0.2s;
     color: #e1e3e6;
@@ -507,8 +492,7 @@
 }
 
 .post-nav-title {
-    @apply mx-0 mb-1 mt-0 p-0 text-black;
-    font-size: 2em;
+    @apply mx-0 mb-1 mt-0 p-0 text-black text-2em;
     line-height: 3rem;
     color: inherit;
     display: -webkit-box;
@@ -555,13 +539,11 @@
 }
 
 .pagination .pagination-box:after {
-    @apply clear-both table;
-    content: "";
+    @apply clear-both table no-content;
 }
 
 .pagination a {
-    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border;
-    z-index: 100;
+    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border z-100;
     border: 1px solid #c4c7cc;
     font-size: 1.6em;
     line-height: 4rem;
@@ -694,8 +676,7 @@ post-content input[type="reset"],
 }
 
 .pricing-box ul>li::before {
-    @apply mr-0;
-    content: "";
+    @apply mr-0 no-content;
     position: inherit;
 }
 
@@ -743,7 +724,7 @@ post-content input[type="reset"],
 }
 
 .author-box h4 {
-    font-size: 2em;
+    @apply text-2em;
 }
 
 .author-box h4 a {
@@ -926,7 +907,7 @@ post-content input[type="reset"],
 }
 
 .post-comments h2 {
-    font-size: 2em;
+    @apply text-2em;
 }
 
 .post-comments h2 a {

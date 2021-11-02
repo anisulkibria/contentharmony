@@ -1,13 +1,11 @@
 // Navigation
 
 .nav-header {
-    @apply absolute top-0 left-0 w-full text-white;
-    z-index: 400;
+    @apply absolute top-0 left-0 w-full text-white z-400;
     transition: all ease-out 0.3s;
 
     .nav-wrapper-control {
-        @apply absolute left-0 top-full w-full cursor-pointer hidden box-border text-white;
-        z-index: 500;
+        @apply absolute left-0 top-full w-full cursor-pointer hidden box-border text-white z-500;
         transition: all linear 0.1s;
 
         .inner {
@@ -135,8 +133,7 @@
 }
 
 .nav-close {
-    @apply fixed left-0 top-0 w-full h-full hidden;
-    z-index: 350;
+    @apply fixed left-0 top-0 w-full h-full hidden z-350;
     background: rgba(37, 40, 43, 0.9);
 }
 

@@ -4,7 +4,9 @@
 
 @tailwind utilities;
 
-@import "kg-card";
+@layer utilities {
+    @import "utils";
+}
 
 @layer components {
     @import "old.scss";
@@ -14,3 +16,5 @@
     @import "footer"; 
     @import "custom";
 }
+
+@import "kg-card";

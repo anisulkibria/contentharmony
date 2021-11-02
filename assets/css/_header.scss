@@ -3,11 +3,7 @@
    ========================================================================== */
 
 .blog-header {
-    @apply relative hidden;
-    padding: calc(12rem + 2vw) 0 calc(1rem + 1vw);
-    margin-bottom: calc(4rem + 2vw);
-    background: var(--ch-blue);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    @apply relative hidden bg-blue p-big mb-default text-shadow-default;
 }
 
 .blog-header .post-title {
@@ -15,21 +11,17 @@
 }
 
 .blog-box {
-    @apply relative z-10 text-center;
-    padding-bottom: calc(4rem + 2vw);
+    @apply relative z-10 text-center pb-default;
 }
 
 .blog-cover {
-    @apply absolute w-full h-full left-0 top-0 flex items-center;
-    z-index: 5;
+    @apply absolute w-full h-full left-0 top-0 flex items-center z-5;
     background: no-repeat scroll center center / cover #000;
     animation: 0.5s ease-in forwards fadein;
 }
 
 .blog-cover:after {
-    @apply absolute w-full left-0 bottom-0 h-2/3;
-    content: "";
-    z-index: 8;
+    @apply absolute w-full left-0 bottom-0 h-2/3 z-8 no-content;
     background: -webkit-linear-gradient(top,
             rgba(0, 0, 0, 0) 0%,
             rgba(0, 0, 0, 0.333) 100%);
@@ -39,13 +31,11 @@
 }
 
 .blog-cover img {
-    @apply relative block w-full h-full m-0 object-cover;
-    z-index: 6;
+    @apply relative block w-full h-full m-0 object-cover z-6;
 }
 
 .blog-name {
-    @apply block m-0 p-0 font-bold no-underline text-white;
-    font-size: 6em;
+    @apply block m-0 p-0 font-bold no-underline text-white text-6em;
     line-height: 1em;
 }
 
@@ -57,14 +47,13 @@
 
 @media only screen and (max-width: 960px) {
     .blog-name {
-        font-size: 4rem;
+        @apply text-6xlp;
     }
 }
 
 .blog-description {
-    @apply block mt-4 p-0 text-white;
+    @apply block mt-4 p-0 text-white text-3em;
     font-family: var(--font-secondary);
-    font-size: 3em;
     line-height: 1.33334em;
 }
 
@@ -76,7 +65,7 @@
 
 @media only screen and (max-width: 960px) {
     .blog-description {
-        font-size: 2rem;
+        @apply text-2xl;
     }
 }
 
@@ -89,8 +78,7 @@
 }
 
 .archive .archive-info {
-    @apply flex mb-2;
-    font-size: 2em;
+    @apply flex mb-2 text-2em;
     line-height: 1em;
 }
 
@@ -103,28 +91,24 @@
 }
 
 .archive .archive-info .archive-count:after {
-    @apply absolute -left-8 w-4 top-2/4;
-    content: "";
+    @apply absolute -left-8 w-4 top-2/4 no-content;
     height: 1px;
     background: #c4c7cc;
 }
 
 .archive .archive-title {
-    @apply my-4 mx-0 text-white;
-    font-size: 4em;
+    @apply my-4 mx-0 text-white text-4em;
     line-height: 1em;
 }
 
 .archive .archive-description {
-    @apply block my-4 mx-0 text-white;
-    font-size: 2em;
+    @apply block my-4 mx-0 text-white text-2em;
     line-height: 1.5em;
     font-family: var(--font-secondary);
 }
 
 .archive .archive-links {
-    @apply block mt-4;
-    font-size: 2em;
+    @apply block mt-4 text-2em;
     line-height: 1.5em;
 }
 

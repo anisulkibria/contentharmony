@@ -13,8 +13,7 @@
 }
 
 .home-template .cols-4.wide.align-items-center .kg-card.kg-image-card img{
-    @apply absolute right-16;
-    bottom: 50%;
+    @apply absolute right-16 bottom-50;
 }
 
 .cols-4 {
