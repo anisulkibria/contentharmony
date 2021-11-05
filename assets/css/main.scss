@@ -10,6 +10,7 @@
 
 @layer components {
     @import "old";
+    @import "global";
     @import "post";
     @import "navigation"; 
     @import "header";
