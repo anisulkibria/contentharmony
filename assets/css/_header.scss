@@ -35,8 +35,7 @@
 }
 
 .blog-name {
-    @apply block m-0 p-0 font-bold no-underline text-white text-6em;
-    line-height: 1em;
+    @apply block m-0 p-0 font-bold no-underline text-white text-6em leading-1em;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -52,9 +51,8 @@
 }
 
 .blog-description {
-    @apply block mt-4 p-0 text-white text-3em;
+    @apply block mt-4 p-0 text-white text-3em leading-1-33em;
     font-family: var(--font-secondary);
-    line-height: 1.33334em;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -78,8 +76,7 @@
 }
 
 .archive .archive-info {
-    @apply flex mb-2 text-2em;
-    line-height: 1em;
+    @apply flex mb-2 text-2em leading-1em;
 }
 
 .archive .archive-info .archive-type {
@@ -97,19 +94,16 @@
 }
 
 .archive .archive-title {
-    @apply my-4 mx-0 text-white text-4em;
-    line-height: 1em;
+    @apply my-4 mx-0 text-white text-4em leading-1em;
 }
 
 .archive .archive-description {
-    @apply block my-4 mx-0 text-white text-2em;
-    line-height: 1.5em;
+    @apply block my-4 mx-0 text-white text-2em leading-1-5em;
     font-family: var(--font-secondary);
 }
 
 .archive .archive-links {
-    @apply block mt-4 text-2em;
-    line-height: 1.5em;
+    @apply block mt-4 text-2em leading-1-5em;
 }
 
 .archive .archive-links a {

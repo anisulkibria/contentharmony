@@ -30,9 +30,8 @@
 }
 
 .post-info {
-    @apply relative z-10 flex mb-8;
+    @apply relative z-10 flex mb-8 leading-1em;
     font-size: 1.8em;
-    line-height: 1em;
 }
 
 .post-info .post-type {
@@ -48,9 +47,8 @@
 }
 
 .post-title {
-    @apply relative z-10 mt-0 mb-8 mx-0 font-bold text-black;
+    @apply relative z-10 mt-0 mb-8 mx-0 font-bold text-black leading-1-25em;
     font-size: 4em;
-    line-height: 1.25em;
     text-indent: -1px;
 }
 
@@ -75,9 +73,8 @@
 }
 
 .post-header .post-title {
-    @apply my-0 mb-16 ml-0 text-white;
+    @apply my-0 mb-16 ml-0 text-white leading-1-25em;
     font-size: 6em;
-    line-height: 1.25em;
 }
 
 @media only screen and (max-width: 960px) {
@@ -136,10 +133,10 @@
 }
 
 .post-excerpt {
+    @apply leading-2em;
     margin: 1em 0 0;
     font-family: var(--font-secondary);
     font-size: 1.75em;
-    line-height: 2em;
 }
 
 @media only screen and (max-width: 960px) {
@@ -176,10 +173,9 @@
 }
 
 .post-info-label {
-    @apply font-normal;
+    @apply font-normal leading-3rem;
     margin-right: 0.75em;
     font-size: 1.6em;
-    line-height: 3rem;
     color: #73777d;
 }
 
@@ -312,9 +308,9 @@
 }
 
 .post-subscribe p {
+    @apply leading-1-33em;
     margin: 0 auto 1.33334em;
     font-size: 1.2em;
-    line-height: 1.33334em;
 }
 
 .post-subscribe .button {
@@ -467,8 +463,7 @@
 }
 
 .post-nav i {
-    @apply absolute top-2/4 w-16 h-16 -mt-8 text-center text-6xlp;
-    line-height: 4rem;
+    @apply absolute top-2/4 w-16 h-16 -mt-8 text-center text-6xlp leading-4rem;
     transition: all ease-out 0.2s;
     color: #e1e3e6;
 }
@@ -543,10 +538,9 @@
 }
 
 .pagination a {
-    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border z-100;
+    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border z-100 leading-4rem;
     border: 1px solid #c4c7cc;
     font-size: 1.6em;
-    line-height: 4rem;
     color: #73777d;
     transition: all ease 0.2s;
     border-radius: 4px;
@@ -585,11 +579,10 @@
 }
 
 .pagination a i {
-    @apply relative w-auto my-auto mx-1;
+    @apply relative w-auto my-auto mx-1 leading-0-75em;
     top: 1px;
     color: inherit;
     font-size: 1.33334em;
-    line-height: 0.75em;
 }
 
 .pagination a i:before {
@@ -719,8 +712,8 @@ post-content input[type="reset"],
 }
 
 .author-box p {
+    @apply leading-1-3em;
     font-size: 1.2em;
-    line-height: 1.3em;
 }
 
 .author-box h4 {
@@ -733,22 +726,6 @@ post-content input[type="reset"],
 
 .author-box .author-picture img {
     @apply max-w-full;
-}
-
-.text-justify {
-    text-align: justify;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-left {
-    text-align: left;
 }
 
 .badge {
