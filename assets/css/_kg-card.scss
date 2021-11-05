@@ -1,14 +1,11 @@
 /* ==========================================================================
    KG Cards
    ========================================================================== */
-   .post-content figure figcaption {
-    position: relative;
+.post-content figure figcaption {
+    @apply relative m-auto leading-2em py-8 px-0;
     color: #73777d;
     max-width: calc(64rem + 8vw);
-    margin: auto;
     font-size: 0.75em;
-    line-height: 2em;
-    padding: 2rem 0;
   }
   
   @media (prefers-color-scheme: darkdisabled) {
@@ -18,11 +15,7 @@
   }
   
   .post-content figure figcaption:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 8rem;
+    @apply no-content absolute left-0 bottom-0 w-32;
     height: 1px;
     background: #e1e3e6;
   }
@@ -56,68 +49,64 @@
   }
   
   .post-content .kg-image-card {
-    margin: 0 0 4rem;
+    @apply mt-0 mx-0 mb-16;
     max-width: none !important;
   }
   
   .post-content .kg-image-card.kg-width-wide {
+    @apply min-w-full;
     max-width: calc(72rem + 24vw) !important;
-    min-width: 100%;
     width: calc(100vw - 4rem);
   }
   
   .post-content .kg-image-card.kg-width-wide figcaption {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    @apply pl-24 pr-24;
   }
   
   @media only screen and (max-width: 640px) {
     .post-content .kg-image-card.kg-width-wide figcaption {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      @apply pl-8 pr-8;
     }
   }
   
   .post-content .kg-image-card.kg-width-wide figcaption:after {
-    margin-left: 6rem;
+    @apply ml-24;
   }
   
   @media only screen and (max-width: 640px) {
     .post-content .kg-image-card.kg-width-wide figcaption:after {
-      margin-left: 2rem;
+      @apply ml-8;
     }
   }
   
   .post-content .kg-image-card.kg-width-full {
-    max-width: none;
+    @apply max-w-none;
     width: 100vw;
     margin-top: 2em;
   }
   
   .post-content .kg-image-card.kg-width-full figcaption {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    @apply pl-32 pr-32;
   }
   
   @media only screen and (max-width: 640px) {
     .post-content .kg-image-card.kg-width-full figcaption {
-      padding-left: 4rem;
-      padding-right: 4rem;
+      @apply pl-16 pr-16;
     }
   }
   
   .post-content .kg-image-card.kg-width-full figcaption:after {
-    margin-left: 8rem;
+    @apply ml-32;
   }
   
   @media only screen and (max-width: 640px) {
     .post-content .kg-image-card.kg-width-full figcaption:after {
-      margin-left: 4rem;
+      @apply ml-16;
     }
   }
   
   .post-content .kg-image-card .kg-image {
-    margin: 0 auto;
+    @apply my-0 mx-auto;
   }
   
   .post-content .kg-image-card .kg-image-full + figcaption {
@@ -125,50 +114,41 @@
   }
   
   .post-content .kg-gallery-card {
-    margin: 0 0 4rem;
+    @apply mt-0 mx-0 mb-16 min-w-full;
     max-width: calc(72rem + 24vw) !important;
-    min-width: 100%;
     width: calc(100vw - 4rem);
   }
   
   .post-content .kg-gallery-card figcaption {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    @apply pl-24 pr-24;
   }
   
   @media only screen and (max-width: 640px) {
     .post-content .kg-gallery-card figcaption {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      @apply pl-8 pr-8;
     }
   }
   
   .post-content .kg-gallery-card figcaption:after {
-    margin-left: 6rem;
+    @apply ml-24;
   }
   
   @media only screen and (max-width: 640px) {
     .post-content .kg-gallery-card figcaption:after {
-      margin-left: 2rem;
+      @apply ml-8;
     }
   }
   
   .post-content .kg-gallery-container {
-    display: flex;
-    flex-direction: column;
+    @apply flex flex-col;
   }
   
   .post-content .kg-gallery-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @apply flex flex-row justify-center;
   }
   
   .post-content .kg-gallery-image img {
-    display: block;
-    margin: 0;
-    width: 100%;
-    height: 100%;
+    @apply block m-0 w-full h-full;
   }
   
   .post-content .kg-gallery-row:not(:first-of-type) {
@@ -180,36 +160,31 @@
   }
   
   .post-content .kg-embed-card {
-    margin: 0 0 4rem;
+    @apply mt-0 mx-0 mb-16;
   }
   
   .post-content .kg-embed-card > * {
-    margin-left: auto;
-    margin-right: auto;
+    @apply ml-auto mr-auto;
   }
   
   .post-content .kg-code-card {
-    min-width: 100%;
-    margin: 0 0 4rem;
+    @apply min-w-full mt-0 mx-0 mr-16;
   }
   
   .post-content .kg-code-card pre {
-    margin: 0;
+    @apply m-0;
   }
   
   .post-content .kg-bookmark-card {
-    width: 100%;
-    margin: 0 0 4rem;
+    @apply w-full mt-0 mx-0 mb-16;
   }
   
   .post-content .kg-bookmark-container {
-    display: flex;
-    text-decoration: none;
+    @apply flex no-underline overflow-hidden;
     min-height: 8em;
     background: #f7f8fa;
     border: 1px solid #e1e3e6;
     box-shadow: none !important;
-    overflow: hidden;
   }
   
   @media (prefers-color-scheme: darkdisabled) {
@@ -220,12 +195,8 @@
   }
   
   .post-content .kg-bookmark-content {
+    @apply flex flex-col flex-grow items-start justify-start;
     text-rendering: optimizeLegibility;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: flex-start;
-    justify-content: start;
     padding: 1.5em;
     color: #73777d;
   }
@@ -237,10 +208,9 @@
   }
   
   .post-content .kg-bookmark-title {
+    @apply font-bold leading-1-66em;
     color: #222426;
     font-size: 0.75em;
-    line-height: 1.66667em;
-    font-weight: 700;
     letter-spacing: 0.5px;
   }
   
@@ -251,42 +221,30 @@
   }
   
   .post-content .kg-bookmark-description {
+    @apply font-normal leading-1-66em overflow-y-hidden;
     display: -webkit-box;
     font-size: 0.75em;
-    line-height: 1.66667em;
-    font-weight: 400;
     margin-top: 0.33334em;
     max-height: 3.33334em;
-    overflow-y: hidden;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
   
   .post-content .kg-bookmark-thumbnail {
-    position: relative;
+    @apply relative max-h-full;
     min-width: 33%;
-    max-height: 100%;
   }
   
   .post-content .kg-bookmark-thumbnail img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    @apply absolute top-0 left-0 w-full h-full object-cover;
   }
   
   .post-content .kg-bookmark-metadata {
+    @apply flex items-center leading-1-66em font-normal flex-wrap;
     text-rendering: optimizeLegibility;
-    display: flex;
-    align-items: center;
     font-size: 0.75em;
-    line-height: 1.66667em;
     color: #222426;
-    font-weight: 400;
     margin-top: 1em;
-    flex-wrap: wrap;
   }
   
   @media (prefers-color-scheme: darkdisabled) {
@@ -311,12 +269,11 @@
   
   @media (max-width: 640px) {
     .post-content .kg-bookmark-container {
-      flex-direction: column;
+      @apply flex-col;
     }
   
     .post-content .kg-bookmark-thumbnail {
-      order: 1;
-      width: 100%;
+      @apply order-1 w-full;
       min-height: 160px;
     }
   
@@ -325,6 +282,6 @@
     }
   
     .post-content .kg-bookmark-content {
-      order: 2;
+      @apply order-2;
     }
   }
