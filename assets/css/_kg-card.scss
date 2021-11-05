@@ -208,7 +208,7 @@
   }
   
   .post-content .kg-bookmark-title {
-    @apply font-bold leading-1-66em;
+    @apply font-bold leading-1_66em;
     color: #222426;
     font-size: 0.75em;
     letter-spacing: 0.5px;
@@ -221,7 +221,7 @@
   }
   
   .post-content .kg-bookmark-description {
-    @apply font-normal leading-1-66em overflow-y-hidden;
+    @apply font-normal leading-1_66em overflow-y-hidden;
     display: -webkit-box;
     font-size: 0.75em;
     margin-top: 0.33334em;
@@ -240,7 +240,7 @@
   }
   
   .post-content .kg-bookmark-metadata {
-    @apply flex items-center leading-1-66em font-normal flex-wrap;
+    @apply flex items-center leading-1_66em font-normal flex-wrap;
     text-rendering: optimizeLegibility;
     font-size: 0.75em;
     color: #222426;

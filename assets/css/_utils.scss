@@ -82,28 +82,28 @@
 .leading-normal {
     line-height: normal;
 }
-.leading-0-75em {
+.leading-0_75em {
     line-height: 0.75em;
 }
 .leading-1em {
     line-height: 1em;
 }
-.leading-1-25em {
+.leading-1_25em {
     line-height: 1.25em;
 }
 .leading-1-3em {
     line-height: 1.3em;
 }
-.leading-1-33em {
+.leading-1_33em {
     line-height: 1.33334em;
 }
 .leading-1-5em {
     line-height: 1.5em;
 }
-.leading-1-66em {
+.leading-1_66em {
     line-height: 1.66667em;
 }
-.leading-1-75em {
+.leading-1_75em {
     line-height: 1.75em;
 }
 .leading-2em {
@@ -114,4 +114,19 @@
 }
 .leading-4rem {
     line-height: 4rem;
+}
+.font-primary {
+    font-family: var(--font-primary);
+}
+.font-secondary {
+    font-family: var(--font-secondary);
+}
+.font-inherit {
+    font-family: inherit;
+}
+.font-monospace {
+    font-family: monospace, sans-serif;
+}
+.font-sans_serif {
+    font-family: sans-serif;
 }

@@ -9,7 +9,13 @@
 }
 
 @layer components {
-    @import "old";
+    @import "normalize";
+    @import "fonts";
+    @import "icons";
+    @import "hljs";
+    @import "avatar";
+    @import "progress";
+    @import "index";
     @import "global";
     @import "post";
     @import "navigation"; 

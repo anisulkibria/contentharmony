@@ -1,0 +1,38 @@
+.avatar {
+    @apply relative overflow-hidden m-0 box-border;
+    border: 2px solid #e1e3e6;
+    background: #e1e3e6;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+    .avatar {
+        border-color: #3b3d40;
+        background: #3b3d40;
+    }
+}
+
+.avatar:after,
+.avatar:before {
+    @apply no-content absolute box-border z-1 w-2/4 h-2/4 left-1/4;
+    bottom: 32.5%;
+    border-radius: 100%;
+    background: #f7f8fa;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+
+    .avatar:after,
+    .avatar:before {
+        background: #222426;
+    }
+}
+
+.avatar:after {
+    @apply -bottom-1/4;
+    width: 80%;
+    left: 10%;
+}
+
+.avatar img {
+    @apply relative block w-full h-full object-cover z-2;
+}

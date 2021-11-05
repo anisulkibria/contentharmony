@@ -1,0 +1,239 @@
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+.hljs {
+    @apply block;
+    color: #66645c;
+    -webkit-text-size-adjust: none;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+    .hljs {
+        color: #c7c6bc;
+    }
+}
+
+.hljs-comment,
+.diff .hljs-header,
+.hljs-javadoc {
+    @apply italic;
+    color: #998;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+
+    .hljs-comment,
+    .diff .hljs-header,
+    .hljs-javadoc {
+        color: #65655f;
+    }
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+    @apply font-bold;
+    color: #333;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+
+    .hljs-keyword,
+    .css .rule .hljs-keyword,
+    .hljs-winutils,
+    .nginx .hljs-title,
+    .hljs-subst,
+    .hljs-request,
+    .hljs-status {
+        color: #bbb;
+    }
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+    color: #008080;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+
+    .hljs-number,
+    .hljs-hexcolor,
+    .ruby .hljs-constant {
+        color: #25b7b7;
+    }
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.hljs-dartdoc,
+.tex .hljs-formula {
+    color: #d14;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+
+    .hljs-string,
+    .hljs-tag .hljs-value,
+    .hljs-phpdoc,
+    .hljs-dartdoc,
+    .tex .hljs-formula {
+        color: #ec2f5e;
+    }
+}
+
+.hljs-title,
+.hljs-id,
+.scss .hljs-preprocessor {
+    color: #900;
+    font-weight: bold;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+
+    .hljs-title,
+    .hljs-id,
+    .scss .hljs-preprocessor {
+        color: #e42a2a;
+    }
+}
+
+.hljs-list .hljs-keyword,
+.hljs-subst {
+    @apply font-normal;
+}
+
+.hljs-class .hljs-title,
+.hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+    @apply font-bold;
+    color: #458;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+
+    .hljs-class .hljs-title,
+    .hljs-type,
+    .vhdl .hljs-literal,
+    .tex .hljs-command {
+        color: #647ecc;
+    }
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rule .hljs-property,
+.django .hljs-tag .hljs-keyword {
+    color: #000080;
+    font-weight: normal;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+
+    .hljs-tag,
+    .hljs-tag .hljs-title,
+    .hljs-rule .hljs-property,
+    .django .hljs-tag .hljs-keyword {
+        color: #536cf3;
+    }
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body,
+.hljs-name {
+    color: #008080;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+
+    .hljs-attribute,
+    .hljs-variable,
+    .lisp .hljs-body,
+    .hljs-name {
+        color: #25b7b7;
+    }
+}
+
+.hljs-regexp {
+    color: #009926;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+    .hljs-regexp {
+        color: #61d27c;
+    }
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.clojure .hljs-keyword,
+.scheme .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+    color: #990073;
+}
+
+.hljs-built_in {
+    color: #0086b3;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+    .hljs-built_in {
+        color: #3cb1d8;
+    }
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+    @apply font-bold;
+    color: #999;
+}
+
+@media (prefers-color-scheme: darkdisabled) {
+
+    .hljs-preprocessor,
+    .hljs-pragma,
+    .hljs-pi,
+    .hljs-doctype,
+    .hljs-shebang,
+    .hljs-cdata {
+        color: #666;
+    }
+}
+
+.hljs-deletion {
+    background: #fdd;
+}
+
+.hljs-addition {
+    background: #dfd;
+}
+
+.diff .hljs-change {
+    background: #0086b3;
+}
+
+.hljs-chunk {
+    color: #aaa;
+}
+
+:root {
+    --font-primary: "Fira Sans", sans-serif;
+    --font-secondary: "Libre Baskerville", serif;
+    --ch-blue: #0a56c7;
+    --ch-blue-dark: #094bad;
+}

@@ -47,7 +47,7 @@
 }
 
 .post-title {
-    @apply relative z-10 mt-0 mb-8 mx-0 font-bold text-black leading-1-25em;
+    @apply relative z-10 mt-0 mb-8 mx-0 font-bold text-black leading-1_25em;
     font-size: 4em;
     text-indent: -1px;
 }
@@ -73,7 +73,7 @@
 }
 
 .post-header .post-title {
-    @apply my-0 mb-16 ml-0 text-white leading-1-25em;
+    @apply my-0 mb-16 ml-0 text-white leading-1_25em;
     font-size: 6em;
 }
 
@@ -133,9 +133,8 @@
 }
 
 .post-excerpt {
-    @apply leading-2em;
+    @apply leading-2em font-secondary;
     margin: 1em 0 0;
-    font-family: var(--font-secondary);
     font-size: 1.75em;
 }
 
@@ -295,11 +294,10 @@
 }
 
 .post-subscribe {
-    @apply relative py-16 px-8 my-32 -mx-32 text-white box-border text-2xl overflow-hidden;
+    @apply relative py-16 px-8 my-32 -mx-32 text-white box-border text-2xl overflow-hidden rounded-sm;
     background: var(--ch-blue);
     background: linear-gradient(315deg, #004ec2 0%, #0a56c7 35%, #1d70eb 100%);
     font-size: 1.5rem;
-    border-radius: 4px;
     filter: drop-shadow(rgba(84, 70, 35, 0.3) 0px 6px 20px);
 }
 
@@ -308,15 +306,14 @@
 }
 
 .post-subscribe p {
-    @apply leading-1-33em;
+    @apply leading-1_33em;
     margin: 0 auto 1.33334em;
     font-size: 1.2em;
 }
 
 .post-subscribe .button {
-    @apply bg-white py-4 px-12 my-8 mx-auto block text-center no-underline;
+    @apply bg-white py-4 px-12 my-8 mx-auto block text-center no-underline rounded-sm;
     color: var(--ch-blue);
-    border-radius: 4px;
     width: 80%;
 }
 
@@ -502,8 +499,7 @@
 }
 
 .post-nav-excerpt {
-    @apply mt-0 mx-0 mb-4 leading-10;
-    font-family: var(--font-secondary);
+    @apply mt-0 mx-0 mb-4 leading-10 font-secondary;
     font-size: 1.5em;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -538,12 +534,11 @@
 }
 
 .pagination a {
-    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border z-100 leading-4rem;
+    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border z-100 leading-4rem rounded-sm;
     border: 1px solid #c4c7cc;
     font-size: 1.6em;
     color: #73777d;
     transition: all ease 0.2s;
-    border-radius: 4px;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -579,7 +574,7 @@
 }
 
 .pagination a i {
-    @apply relative w-auto my-auto mx-1 leading-0-75em;
+    @apply relative w-auto my-auto mx-1 leading-0_75em;
     top: 1px;
     color: inherit;
     font-size: 1.33334em;
@@ -625,7 +620,7 @@ post-content input[type="reset"],
 .post-content input[type="button"],
 .post-content button,
 .post-content .button {
-    border-radius: 4px;
+    @apply rounded-sm;
 }
 
 .post-content select,
@@ -648,7 +643,7 @@ post-content input[type="reset"],
 
 .post img,
 .post img {
-    border-radius: 4px;
+    @apply rounded-sm;
     filter: drop-shadow(rgba(84, 70, 35, 0.3) 0px 6px 20px);
 }
 

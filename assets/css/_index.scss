@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Index
+   ========================================================================== */
+.container {
+  @apply relative;
+}
+
+.container .post .post-box {
+  padding-top: calc(4rem + 2vw);
+  padding-bottom: calc(4rem + 2vw);
+}
+
+.container .post .post-box .post-title {
+  color: #222426;
+}
+
+#index .post-title {
+  @apply text-5xl;
+}
+
+.container .post.featured .post-title:after {
+  @apply absolute w-16 h-16 -left-16 top-0 font-normal not-italic text-center;
+  font-family: "icon";
+  font-size: 0.5em;
+  content: "\e800";
+  color: #ffc336;
+}
+
+#index h2 a:hover {
+  @apply underline;
+}

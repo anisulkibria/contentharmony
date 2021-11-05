@@ -51,8 +51,7 @@
 }
 
 .blog-description {
-    @apply block mt-4 p-0 text-white text-3em leading-1-33em;
-    font-family: var(--font-secondary);
+    @apply block mt-4 p-0 text-white text-3em leading-1_33em font-secondary;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -98,8 +97,7 @@
 }
 
 .archive .archive-description {
-    @apply block my-4 mx-0 text-white text-2em leading-1-5em;
-    font-family: var(--font-secondary);
+    @apply block my-4 mx-0 text-white text-2em leading-1-5em font-secondary;
 }
 
 .archive .archive-links {

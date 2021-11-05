@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Globl
+   Global
    ========================================================================== */
 html {
     @apply overflow-x-hidden;
@@ -12,8 +12,7 @@ html.menu-active {
 }
 
 body {
-    @apply font-normal overflow-x-hidden bg-white;
-    font-family: var(--font-primary);
+    @apply font-normal overflow-x-hidden bg-white font-primary;
     font-size: 1em;
     line-height: 1.75em;
     color: #222426;
@@ -134,14 +133,12 @@ hr.small {
 }
 
 .post-content p {
-    @apply mt0 mx-0 mb-16;
-    font-family: var(--font-secondary);
+    @apply mt0 mx-0 mb-16 font-secondary;
 }
 
 .post-content ol,
 .post-content ul {
-    @apply mt-0 mx-0 mb-16 box-border;
-    font-family: var(--font-secondary);
+    @apply mt-0 mx-0 mb-16 box-border font-secondary;
     padding-left: 2em;
 }
 
@@ -155,13 +152,12 @@ hr.small {
 
 .post-content ol>li:before,
 .post-content ul>li:before {
-    @apply absolute font-medium text-right;
+    @apply absolute font-medium text-right font-primary;
     width: 1.5em;
     margin-left: -2em;
     font-size: 1em;
     line-height: 2em;
     color: var(--color-primary);
-    font-family: var(--font-primary);
 }
 
 .post-content ul>li:before {
@@ -188,16 +184,15 @@ hr.small {
 }
 
 .post-content blockquote {
-    @apply mt-0 mx-0 mb-16 italic font-normal box-border;
-    font-family: var(--font-secondary);
+    @apply mt-0 mx-0 mb-16 italic font-normal box-border font-secondary;
     padding: 0.25em 1em;
     -moz-box-sizing: border-box;
     border-left: 0.25em solid var(--color-primary);
 }
 
 .post-content blockquote * {
+    @apply font-inherit;
     margin: 0 0 1em;
-    font-family: inherit;
     color: inherit;
 }
 
@@ -232,13 +227,12 @@ hr.small {
 }
 
 .post-content dl {
-    @apply mt-0 mx-0 mb-16;
-    font-family: var(--font-secondary);
+    @apply mt-0 mx-0 mb-16 font-secondary;
     padding-left: 30px;
 }
 
 .post-content dl dt {
-    @apply font-bold leading-1-25em;
+    @apply font-bold leading-1_25em;
     font-size: 0.75em;
     margin-bottom: 0.33334em;
 }
@@ -263,10 +257,9 @@ hr.small {
 
 .post-content code,
 .post-content tt {
-    @apply relative whitespace-pre-wrap py-1 px-2;
+    @apply relative whitespace-pre-wrap py-1 px-2 font-monospace;
     position: relative;
     margin: 0 1px;
-    font-family: monospace, sans-serif;
     font-size: 0.75em;
     background: #f7f8fa;
     border: 1px solid #e1e3e6;
@@ -283,9 +276,8 @@ hr.small {
 }
 
 .post-content pre {
-    @apply relative mt-0 mx-0 mb-16 overflow-hidden whitespace-pre box-border;
+    @apply relative mt-0 mx-0 mb-16 overflow-hidden whitespace-pre box-border font-monospace;
     padding: 1em;
-    font-family: monospace, sans-serif;
     background: #f7f8fa;
     border: 1px solid #e1e3e6;
 }
@@ -334,14 +326,13 @@ hr.small {
 }
 
 .post-content kbd {
-    @apply inline-block font-bold;
+    @apply inline-block font-bold rounded-sm;
     margin-bottom: 0.5em;
     padding: 1px 8px;
     border: #e1e3e6 1px solid;
     text-shadow: #fff 0 1px 0;
     font-size: 0.9em;
     background: #f7f8fa;
-    border-radius: 4px;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
 }
 
@@ -367,7 +358,7 @@ hr.small {
 
 .post-content table td,
 .post-content table th {
-    @apply relative p-6 leading-1-33em;
+    @apply relative p-6 leading-1_33em;
     font-size: 0.75em;
     border: 1px solid #e1e3e6;
 }
@@ -381,7 +372,7 @@ hr.small {
 }
 
 .post-content table th {
-    @apply text-left font-medium leading-1-33em;
+    @apply text-left font-medium leading-1_33em;
     letter-spacing: 1px;
     font-size: 0.75em;
     color: #73777d;
@@ -410,8 +401,7 @@ hr.small {
 }
 
 .post-content label {
-    @apply block mb-2 font-medium;
-    font-family: var(--font-primary);
+    @apply block mb-2 font-medium font-primary;
     color: #222426;
 }
 
@@ -584,3 +574,25 @@ hr.small {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important;
 }
+
+.wide {
+    @apply min-w-full;
+    max-width: calc(72rem + 24vw) !important;
+    width: calc(100vw - 4rem);
+  }
+  
+  @media only screen and (max-width: 640px) {
+    .wide {
+      @apply max-w-full min-w-full w-full;
+    }
+  }
+  
+  @keyframes fadein {
+    0% {
+      opacity: 0.2;
+    }
+  
+    100% {
+      opacity: 0.9;
+    }
+  }

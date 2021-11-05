@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Reading Progress
+   ========================================================================== */
+.progress-container {
+    @apply fixed w-full left-0 top-0 bg-transparent h-1 z-1000;
+    transition: all ease-out 0.2s;
+}
+
+.progress-container.complete {
+    transform: translateY(-3px);
+}
+
+.progress-bar {
+    @apply block w-0;
+    height: 3px;
+    background: var(--color-primary);
+}
