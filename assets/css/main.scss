@@ -9,8 +9,8 @@
 }
 
 @layer components {
-    @import "old.scss";
-    @import "post.scss";
+    @import "old";
+    @import "post";
     @import "navigation"; 
     @import "header";
     @import "footer"; 
