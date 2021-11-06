@@ -55,6 +55,36 @@
 .z-1000 {
     z-index: 1000;
 }
+.text-0_5em {
+    font-size: 0.5em;
+}
+.text-0_75em {
+    font-size: 0.75em;
+}
+.text-0_9em {
+    font-size: 0.9em;
+}
+.text-1em {
+    font-size: 1em;
+}
+.text-1_2em {
+    font-size: 1.2em;
+}
+.text-1_33em {
+    font-size: 1.33334em;
+}
+.tex-1_5em {
+    font-size: 1.5em;
+}
+.text-1_6em {
+    font-size: 1.6em;
+}
+.text-1_75em {
+    font-size: 1.75em;
+}
+.text-1_8em {
+    font-size: 1.8em;
+}
 .text-2em {
     font-size: 2em;
 }
@@ -70,11 +100,35 @@
 .text-6em {
     font-size: 6em;
 }
+.text-1_3rem {
+    font-size: 1.3rem;
+}
+.text-1_8rem {
+    font-size: 1.8rem;
+}
+.text-2_4rem {
+    font-size: 2.4rem;
+}
 .text-6xlp {
     font-size: 4rem;
 }
+.text-62_5- {
+    font-size: 62.5%;
+}
+.text-75- {
+    font-size: 75%;
+}
+.text-80- {
+    font-size: 80%;
+}
+.text-85- {
+    font-size: 85%;
+}
 .no-content {
     content: "";
+}
+.leading-one {
+    line-height: 1;
 }
 .leading-none {
     line-height: 0;
@@ -91,7 +145,7 @@
 .leading-1_25em {
     line-height: 1.25em;
 }
-.leading-1-3em {
+.leading-1_3em {
     line-height: 1.3em;
 }
 .leading-1_33em {
@@ -129,4 +183,8 @@
 }
 .font-sans_serif {
     font-family: sans-serif;
+}
+.text-size-adjust-full {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }

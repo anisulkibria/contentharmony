@@ -30,8 +30,7 @@
 }
 
 .post-info {
-    @apply relative z-10 flex mb-8 leading-1em;
-    font-size: 1.8em;
+    @apply relative z-10 flex mb-8 leading-1em text-1_8em;
 }
 
 .post-info .post-type {
@@ -47,8 +46,7 @@
 }
 
 .post-title {
-    @apply relative z-10 mt-0 mb-8 mx-0 font-bold text-black leading-1_25em;
-    font-size: 4em;
+    @apply relative z-10 mt-0 mb-8 mx-0 font-bold text-black leading-1_25em text-4em;
     text-indent: -1px;
 }
 
@@ -73,8 +71,7 @@
 }
 
 .post-header .post-title {
-    @apply my-0 mb-16 ml-0 text-white leading-1_25em;
-    font-size: 6em;
+    @apply my-0 mb-16 ml-0 text-white leading-1_25em text-6em;
 }
 
 @media only screen and (max-width: 960px) {
@@ -84,8 +81,7 @@
 }
 
 .post-meta {
-    @apply font-normal leading-8;
-    font-size: 1.6em;
+    @apply font-normal leading-8 text-1_6em;
 }
 
 .post-meta a {
@@ -133,14 +129,13 @@
 }
 
 .post-excerpt {
-    @apply leading-2em font-secondary;
+    @apply leading-2em font-secondary text-1_75em;
     margin: 1em 0 0;
-    font-size: 1.75em;
 }
 
 @media only screen and (max-width: 960px) {
     .post-excerpt {
-        font-size: 1.5rem;
+        @apply text-2xl;
     }
 }
 
@@ -172,9 +167,8 @@
 }
 
 .post-info-label {
-    @apply font-normal leading-3rem;
+    @apply font-normal leading-3rem text-1_6em;
     margin-right: 0.75em;
-    font-size: 1.6em;
     color: #73777d;
 }
 
@@ -190,10 +184,8 @@
 }
 
 .post-share a {
-    @apply block w-12 h-12 p-0 text-center no-underline text-white;
+    @apply block w-12 h-12 p-0 text-center no-underline text-white text-1_6em leading-3rem;
     margin-right: 0.5em;
-    font-size: 1.6em;
-    line-height: 3rem;
     border-radius: 2em;
     transition: all ease 0.2s;
 }
@@ -258,12 +250,10 @@
 }
 
 .post-tags a {
-    @apply inline-block py-0 px-6 font-medium text-center no-underline text-white box-border whitespace-nowrap;
+    @apply inline-block py-0 px-6 font-medium text-center no-underline text-white box-border whitespace-nowrap text-1_6em leading-3rem;
     margin-right: 0.5em;
     margin-bottom: 0.5em;
     background: var(--color-primary);
-    font-size: 1.6em;
-    line-height: 3rem;
     border-radius: 2em;
     transition: all ease 0.2s;
 }
@@ -294,10 +284,9 @@
 }
 
 .post-subscribe {
-    @apply relative py-16 px-8 my-32 -mx-32 text-white box-border text-2xl overflow-hidden rounded-sm;
+    @apply relative py-16 px-8 my-32 -mx-32 text-white box-border overflow-hidden rounded-sm text-2xl;
     background: var(--ch-blue);
     background: linear-gradient(315deg, #004ec2 0%, #0a56c7 35%, #1d70eb 100%);
-    font-size: 1.5rem;
     filter: drop-shadow(rgba(84, 70, 35, 0.3) 0px 6px 20px);
 }
 
@@ -306,9 +295,8 @@
 }
 
 .post-subscribe p {
-    @apply leading-1_33em;
+    @apply leading-1_33em text-1_2em;
     margin: 0 auto 1.33334em;
-    font-size: 1.2em;
 }
 
 .post-subscribe .button {
@@ -430,7 +418,7 @@
 }
 
 .post-nav-label {
-    font-size: 1.3rem;
+    @apply text-1_3rem;
     color: #898b8f;
 }
 
@@ -484,8 +472,7 @@
 }
 
 .post-nav-title {
-    @apply mx-0 mb-1 mt-0 p-0 text-black text-2em;
-    line-height: 3rem;
+    @apply mx-0 mb-1 mt-0 p-0 text-black text-2em leading-3rem;
     color: inherit;
     display: -webkit-box;
     -webkit-line-clamp: 1;
@@ -499,15 +486,13 @@
 }
 
 .post-nav-excerpt {
-    @apply mt-0 mx-0 mb-4 leading-10 font-secondary;
-    font-size: 1.5em;
+    @apply mt-0 mx-0 mb-4 leading-10 font-secondary tex-1_5em;
     display: -webkit-box;
     -webkit-line-clamp: 2;
 }
 
 .post-nav-meta {
-    @apply m-0 leading-8;
-    font-size: 1.6em;
+    @apply m-0 leading-8 text-1_6em;
     color: #73777d;
 }
 
@@ -534,9 +519,8 @@
 }
 
 .pagination a {
-    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border z-100 leading-4rem rounded-sm;
+    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border z-100 leading-4rem rounded-sm text-1_6em;
     border: 1px solid #c4c7cc;
-    font-size: 1.6em;
     color: #73777d;
     transition: all ease 0.2s;
 }
@@ -574,10 +558,9 @@
 }
 
 .pagination a i {
-    @apply relative w-auto my-auto mx-1 leading-0_75em;
+    @apply relative w-auto my-auto mx-1 leading-0_75em text-1_33em;
     top: 1px;
     color: inherit;
-    font-size: 1.33334em;
 }
 
 .pagination a i:before {
@@ -585,9 +568,7 @@
 }
 
 .pagination .pagination-info {
-    @apply absolute w-full h-16 left-0 z-50 block text-center;
-    font-size: 1.6em;
-    line-height: 4rem;
+    @apply absolute w-full h-16 left-0 z-50 block text-center text-1_6em leading-4rem;
     color: #73777d;
 }
 
@@ -707,8 +688,7 @@ post-content input[type="reset"],
 }
 
 .author-box p {
-    @apply leading-1-3em;
-    font-size: 1.2em;
+    @apply leading-1_3em text-1_2em;
 }
 
 .author-box h4 {
@@ -724,10 +704,8 @@ post-content input[type="reset"],
 }
 
 .badge {
-    @apply inline-block font-bold text-center whitespace-nowrap align-baseline rounded;
+    @apply inline-block font-bold text-center whitespace-nowrap align-baseline rounded text-85- leading-one;
     padding: 0.25em 0.4em;
-    font-size: 85%;
-    line-height: 1;
 }
 
 .badge:empty {
@@ -851,8 +829,7 @@ post-content input[type="reset"],
      Post Comments
      ========================================================================== */
 .post-comments {
-    @apply relative text-center box-border;
-    font-size: 1.5rem;
+    @apply relative text-center box-border text-2xl;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -874,8 +851,7 @@ post-content input[type="reset"],
 }
 
 .post-comments p {
-    font-size: 1.2em;
-    line-height: 1.3em;
+    @apply text-1_2em leading-1_3em;
 }
 
 .post-comments h2 {
@@ -887,9 +863,8 @@ post-content input[type="reset"],
 }
 
 .post-comments-activate {
-    @apply inline-block h-16 my-8 mx-0 py-0 px-8 font-medium text-center cursor-pointer;
+    @apply inline-block h-16 my-8 mx-0 py-0 px-8 font-medium text-center cursor-pointer text-1_6em;
     border: 1px solid #c4c7cc;
-    font-size: 1.6em;
     color: #73777d;
     transition: all ease 0.2s;
     border-radius: 2em;

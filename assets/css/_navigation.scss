@@ -12,8 +12,7 @@
             @apply flex justify-between;
 
             a {
-                @apply relative block w-full py-8 px-0 leading-8;
-                font-size: 1.8rem;
+                @apply relative block w-full py-8 px-0 leading-8 text-1_8rem;
                 color: inherit;
                 transition: all ease-out 0.1s;
 
@@ -141,7 +140,7 @@
 
 .nav-meta li {
     a {
-        font-size: 1.75em;
+        @apply text-1_75em;
     }
 
     span {
@@ -170,8 +169,7 @@
 
 .nav-header li {
     a {
-        @apply block py-4 px-0 leading-8 text-white whitespace-nowrap no-underline font-normal cursor-pointer overflow-ellipsis;
-        font-size: 1.6em;
+        @apply block py-4 px-0 leading-8 text-white whitespace-nowrap no-underline font-normal cursor-pointer overflow-ellipsis text-1_6em;
         transition: color linear 0.1s;
 
         &:focus,
@@ -241,8 +239,7 @@
             }
 
             a {
-                @apply pl-0 text-center;
-                font-size: 1.8em;
+                @apply pl-0 text-center text-1_8em;
 
                 &:before {
                     @apply absolute left-0 top-2/4 bg-transparent hidden no-content w-6;

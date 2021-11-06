@@ -2,8 +2,7 @@
    Global
    ========================================================================== */
 html {
-    @apply overflow-x-hidden;
-    font-size: 62.5%;
+    @apply overflow-x-hidden text-62_5-;
 }
 
 .menu-active body,
@@ -12,9 +11,7 @@ html.menu-active {
 }
 
 body {
-    @apply font-normal overflow-x-hidden bg-white font-primary;
-    font-size: 1em;
-    line-height: 1.75em;
+    @apply font-normal overflow-x-hidden bg-white font-primary text-1em leading-1_75em;
     color: #222426;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -54,8 +51,7 @@ hr.small {
 }
 
 .post-content {
-    font-size: 1.75em;
-    line-height: 2em;
+    @apply text-1_75em leading-2em;
 }
 
 .post-content a {
@@ -77,8 +73,7 @@ hr.small {
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-    @apply mt-0 mx-0 mb-16 text-black;
-    line-height: 1.25em;
+    @apply mt-0 mx-0 mb-16 text-black leading-1_25em;
     text-rendering: optimizeLegibility;
 }
 
@@ -108,7 +103,7 @@ hr.small {
 
 .post-content h3,
 .post-content .h3 {
-    font-size: 2.4rem;
+    @apply text-2_4rem;
 }
 
 .post-content h4,
@@ -152,11 +147,9 @@ hr.small {
 
 .post-content ol>li:before,
 .post-content ul>li:before {
-    @apply absolute font-medium text-right font-primary;
+    @apply absolute font-medium text-right font-primary text-1em leading-2em;
     width: 1.5em;
     margin-left: -2em;
-    font-size: 1em;
-    line-height: 2em;
     color: var(--color-primary);
 }
 
@@ -223,7 +216,7 @@ hr.small {
 }
 
 .post-content .small {
-    font-size: 0.9em;
+    @apply text-0_9em;
 }
 
 .post-content dl {
@@ -232,8 +225,7 @@ hr.small {
 }
 
 .post-content dl dt {
-    @apply font-bold leading-1_25em;
-    font-size: 0.75em;
+    @apply font-bold leading-1_25em text-0_75em;
     margin-bottom: 0.33334em;
 }
 
@@ -257,10 +249,9 @@ hr.small {
 
 .post-content code,
 .post-content tt {
-    @apply relative whitespace-pre-wrap py-1 px-2 font-monospace;
+    @apply relative whitespace-pre-wrap py-1 px-2 font-monospace text-0_75em;
     position: relative;
     margin: 0 1px;
-    font-size: 0.75em;
     background: #f7f8fa;
     border: 1px solid #e1e3e6;
     top: -2px;
@@ -290,12 +281,11 @@ hr.small {
 }
 
 .post-content pre .lines {
-    @apply absolute h-full left-0 top-0 text-right box-border select-none leading-2em;
+    @apply absolute h-full left-0 top-0 text-right box-border select-none leading-2em text-0_75em;
     width: 2.66667em;
     padding: 1.33334em 0;
     border-right: 1px solid #e1e3e6;
     color: #73777d;
-    font-size: 0.75em;
     background: #f7f8fa;
     -webkit-user-select: none;
 }
@@ -314,10 +304,9 @@ hr.small {
 
 .post-content pre code,
 .post-content pre tt {
-    @apply block static top-auto whitespace-pre bg-transparent overflow-x-auto leading-2em border-none;
+    @apply block static top-auto whitespace-pre bg-transparent overflow-x-auto leading-2em border-none text-0_75em;
     margin: -1.33334em -1.33334em -1.33334em 1.33334em;
     padding: 1.33334em;
-    font-size: 0.75em;
     vertical-align: inherit;
 }
 
@@ -326,12 +315,11 @@ hr.small {
 }
 
 .post-content kbd {
-    @apply inline-block font-bold rounded-sm;
+    @apply inline-block font-bold rounded-sm text-0_9em;
     margin-bottom: 0.5em;
     padding: 1px 8px;
     border: #e1e3e6 1px solid;
     text-shadow: #fff 0 1px 0;
-    font-size: 0.9em;
     background: #f7f8fa;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
 }
@@ -358,8 +346,7 @@ hr.small {
 
 .post-content table td,
 .post-content table th {
-    @apply relative p-6 leading-1_33em;
-    font-size: 0.75em;
+    @apply relative p-6 leading-1_33em text-0_75em;
     border: 1px solid #e1e3e6;
 }
 
@@ -372,9 +359,8 @@ hr.small {
 }
 
 .post-content table th {
-    @apply text-left font-medium leading-1_33em;
+    @apply text-left font-medium leading-1_33em text-0_75em;
     letter-spacing: 1px;
-    font-size: 0.75em;
     color: #73777d;
 }
 

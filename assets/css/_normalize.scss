@@ -3,9 +3,7 @@
    ========================================================================== */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
-    @apply font-sans_serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    @apply font-sans_serif text-size-adjust-full;
 }
 
 body {
@@ -66,7 +64,7 @@ dfn {
 }
 
 h1 {
-    font-size: 2em;
+    @apply text-2em;
     margin: 0.67em 0;
 }
 
@@ -76,14 +74,12 @@ mark {
 }
 
 small {
-    font-size: 80%;
+    @apply text-80-;
 }
 
 sub,
 sup {
-    @apply relative align-baseline;
-    font-size: 75%;
-    line-height: 0;
+    @apply relative align-baseline text-75- leading-none;
 }
 
 sup {
@@ -119,8 +115,7 @@ code,
 kbd,
 pre,
 samp {
-    @apply font-monospace;
-    font-size: 1em;
+    @apply font-monospace text-1em;
 }
 
 button,
@@ -161,7 +156,7 @@ input::-moz-focus-inner {
 }
 
 input {
-    line-height: normal;
+    @apply leading-normal;
 }
 
 input[type="checkbox"],

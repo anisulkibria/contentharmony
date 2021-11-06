@@ -2,10 +2,9 @@
    KG Cards
    ========================================================================== */
 .post-content figure figcaption {
-    @apply relative m-auto leading-2em py-8 px-0;
+    @apply relative m-auto leading-2em py-8 px-0 text-0_75em;
     color: #73777d;
     max-width: calc(64rem + 8vw);
-    font-size: 0.75em;
   }
   
   @media (prefers-color-scheme: darkdisabled) {
@@ -208,9 +207,8 @@
   }
   
   .post-content .kg-bookmark-title {
-    @apply font-bold leading-1_66em;
+    @apply font-bold leading-1_66em text-0_75em;
     color: #222426;
-    font-size: 0.75em;
     letter-spacing: 0.5px;
   }
   
@@ -221,9 +219,8 @@
   }
   
   .post-content .kg-bookmark-description {
-    @apply font-normal leading-1_66em overflow-y-hidden;
+    @apply font-normal leading-1_66em overflow-y-hidden text-0_75em;
     display: -webkit-box;
-    font-size: 0.75em;
     margin-top: 0.33334em;
     max-height: 3.33334em;
     -webkit-line-clamp: 2;
@@ -240,9 +237,8 @@
   }
   
   .post-content .kg-bookmark-metadata {
-    @apply flex items-center leading-1_66em font-normal flex-wrap;
+    @apply flex items-center leading-1_66em font-normal flex-wrap text-0_75em;
     text-rendering: optimizeLegibility;
-    font-size: 0.75em;
     color: #222426;
     margin-top: 1em;
   }

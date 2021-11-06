@@ -29,7 +29,7 @@
   */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-    @apply not-italic inline-block text-center normal-case;
+    @apply not-italic inline-block text-center normal-case leading-1em;
     font-family: "icon";
     font-weight: normal;
     speak: none;
@@ -39,8 +39,6 @@
     /* opacity: .8; */
     /* For safety - reset parent styles, that can break glyph codes*/
     text-transform: none;
-    /* fix buttons height, for twitter bootstrap */
-    line-height: 1em;
     /* Animation center compensation - margins should be symmetric */
     /* remove if not needed */
     margin-left: 0.2em;
