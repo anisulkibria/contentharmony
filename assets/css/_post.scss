@@ -143,15 +143,15 @@
     @apply flex flex-col items-center;
 }
 
-.post-content>* {
+.post-content > * {
     @apply min-w-full max-w-full box-border;
 }
 
-.post-content>*:last-child {
+.post-content > *:last-child {
     @apply mb-0;
 }
 
-.post-content>*:first-child {
+.post-content > *:first-child {
     @apply mt-0;
 }
 

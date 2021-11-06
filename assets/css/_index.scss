@@ -25,6 +25,12 @@
   color: #ffc336;
 }
 
+@media (min-width: 640px) {
+    .tag-template .container {
+      max-width: 100%;
+  }
+}
+
 #index h2 a:hover {
   @apply underline;
 }
