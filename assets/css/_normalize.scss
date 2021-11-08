@@ -69,7 +69,7 @@ h1 {
 }
 
 mark {
-    background: #ff0;
+    @apply bg-yellow-400;
     color: #000;
 }
 

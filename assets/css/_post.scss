@@ -2,13 +2,11 @@
    Post
    ========================================================================== */
 .post-header {
-    @apply relative overflow-hidden bg-blue p-big mb-default text-shadow-default;
+    @apply relative overflow-hidden bg-blue-700 p-big mb-default text-shadow-default;
 }
 
 .post-cover {
-    @apply absolute w-full h-full left-0 top-0 flex items-center z-5;
-    background: no-repeat scroll center center / cover #000;
-    animation: 0.5s ease-in forwards fadein;
+    @apply absolute w-full h-full left-0 top-0 flex items-center z-5 cover-bg cover-anim;
 }
 
 .post-cover img {
@@ -17,12 +15,6 @@
 
 .post-cover:after {
     @apply absolute w-full h-3/4 left-0 bottom-0 z-8 no-content;
-    background: -webkit-linear-gradient(top,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0.333) 100%);
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0.333) 100%);
 }
 
 .post {
@@ -46,8 +38,7 @@
 }
 
 .post-title {
-    @apply relative z-10 mt-0 mb-8 mx-0 font-bold text-black leading-1_25em text-4em;
-    text-indent: -1px;
+    @apply relative z-10 mt-0 mb-8 mx-0 font-bold text-black leading-1_25em text-4em -text-indent-1px;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -58,9 +49,7 @@
 
 @media only screen and (max-width: 960px) {
     .post-title {
-        @apply text-5xl;
-        -webkit-hyphens: auto;
-        hyphens: auto;
+        @apply text-5xl hyphens-auto;
     }
 }
 
@@ -284,8 +273,7 @@
 }
 
 .post-subscribe {
-    @apply relative py-16 px-8 my-32 -mx-32 text-white box-border overflow-hidden rounded-sm text-2xl;
-    background: var(--ch-blue);
+    @apply relative py-16 px-8 my-32 -mx-32 text-white box-border overflow-hidden rounded-sm text-2xl bg-blue-600;
     background: linear-gradient(315deg, #004ec2 0%, #0a56c7 35%, #1d70eb 100%);
     filter: drop-shadow(rgba(84, 70, 35, 0.3) 0px 6px 20px);
 }
@@ -300,8 +288,7 @@
 }
 
 .post-subscribe .button {
-    @apply bg-white py-4 px-12 my-8 mx-auto block text-center no-underline rounded-sm;
-    color: var(--ch-blue);
+    @apply bg-white py-4 px-12 my-8 mx-auto block text-center no-underline rounded-sm bg-blue-600;
     width: 80%;
 }
 
@@ -344,14 +331,13 @@
 }
 
 .post-nav:after {
-    @apply absolute h-full left-1/2 top-0 z-2 no-content;
+    @apply absolute h-full left-1/2 top-0 z-2 no-content bg-gray-100;
     width: 1px;
-    background: #e1e3e6;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
     .post-nav:after {
-        background: #3b3d40;
+        @apply bg-gray-700; 
     }
 }
 
@@ -434,28 +420,25 @@
     }
 
     .post-nav-teaser:after {
-        @apply absolute w-full left-0 bottom-0 z-2 no-content;
-        height: 1px;
+        @apply absolute w-full left-0 bottom-0 z-2 no-content height-1px bg-gray-100;
         margin-bottom: -1px;
-        background: #e1e3e6;
     }
 }
 
 @media only screen and (max-width: 640px) and (prefers-color-scheme: darkdisabled) {
     .post-nav-teaser:after {
-        background: #3b3d40;
+        @apply bg-gray-700;
     }
 }
 
 .post-nav i {
-    @apply absolute top-2/4 w-16 h-16 -mt-8 text-center text-6xlp leading-4rem;
+    @apply absolute top-2/4 w-16 h-16 -mt-8 text-center text-6xlp leading-4rem text-gray-100;
     transition: all ease-out 0.2s;
-    color: #e1e3e6;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
     .post-nav i {
-        color: #3b3d40;
+        @apply text-gray-700;
     }
 }
 
@@ -481,12 +464,11 @@
 @media (prefers-color-scheme: darkdisabled) {
     .post-nav-title {
         @apply text-white;
-        color: #fff;
     }
 }
 
 .post-nav-excerpt {
-    @apply mt-0 mx-0 mb-4 leading-10 font-secondary tex-1_5em;
+    @apply mt-0 mx-0 mb-4 leading-10 font-secondary text-1_5em;
     display: -webkit-box;
     -webkit-line-clamp: 2;
 }
@@ -839,13 +821,13 @@ post-content input[type="reset"],
 }
 
 .post-comments.activated {
-    background: #f7f8fa;
+    @apply bg-gray-50;
     border: 1px solid #e1e3e6;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
     .post-comments.activated {
-        background: #222426;
+        @apply bg-gray-800;
         border-color: #3b3d40;
     }
 }

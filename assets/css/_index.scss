@@ -6,8 +6,7 @@
 }
 
 .container .post .post-box {
-  padding-top: calc(4rem + 2vw);
-  padding-bottom: calc(4rem + 2vw);
+  @apply pb-calc-4rem-2vw pt-calc-4rem-2vw;
 }
 
 .container .post .post-box .post-title {

@@ -20,7 +20,7 @@
 }
 
 .footer-links {
-    @apply py-16 px-0 text-white tex-1_5em;
+    @apply py-16 px-0 text-white text-1_5em;
 
     .inner {
         @apply py-0 px-12;
@@ -50,15 +50,14 @@
 
 .nav-footer {
     @apply relative z-20 py-16 px-4 mt-auto;
-    color: #cacaca;
+    @apply text-gray-300;
 
     a {
-        @apply inline-block no-underline font-normal cursor-pointer;
-        color: #cacaca;
+        @apply inline-block no-underline font-normal cursor-pointer text-gray-300;
 
         &:focus,
         &:hover {
-            color: #cacaca;
+            @apply text-gray-300;
         }
     }
 
@@ -82,19 +81,17 @@
         }
 
         a {
-            @apply block m-0 leading-8 whitespace-nowrap overflow-ellipsis no-underline font-normal cursor-pointer tex-1_5em;
+            @apply block m-0 leading-8 whitespace-nowrap overflow-ellipsis no-underline font-normal cursor-pointer text-1_5em;
         }
     }
 
     li.active a {
-        @apply font-medium;
-        color: #cacaca;
+        @apply font-medium text-gray-300;
     }
 }
 
 .nav-copy {
-    @apply block leading-8 whitespace-nowrap tex-1_5em;
-    color: #cacaca;
+    @apply block leading-8 whitespace-nowrap text-1_5em text-gray-300;
 
     .nav-rss {
         @apply my-0 mx-12;
@@ -102,8 +99,7 @@
 }
 
 .nav-credits {
-    @apply flex-shrink-0 block ml-auto leading-8 tex-1_5em;
-    color: #cacaca;
+    @apply flex-shrink-0 block ml-auto leading-8 text-1_5em text-gray-300;
 
     a {
         @apply no-underline font-medium;
@@ -149,24 +145,24 @@
 @media (prefers-color-scheme: darkdisabled) {
     .nav-footer {
         a {
-            color: #cacaca;
+            @apply text-gray-300;
 
             &:focus,
             &:hover {
-                color: #cacaca;
+                @apply text-gray-300;
             }
         }
 
         li.active a {
-            color: #cacaca;
+            @apply text-gray-300;
         }
     }
 
     .nav-copy {
-        color: #cacaca;
+        @apply text-gray-300;
     }
 
     .nav-credits {
-        color: #cacaca;
+        @apply text-gray-300;
     }
 }

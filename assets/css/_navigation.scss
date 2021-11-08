@@ -89,7 +89,7 @@
             &:hover,
             a.button.cta:focus,
             a.button.cta:hover {
-                background: #f2f2f2;
+                @apply bg-gray-100;
             }
         }
 
@@ -97,7 +97,7 @@
 
             &:focus,
             &:hover {
-                background: #f2f2f2;
+                @apply bg-gray-100;
             }
         }
     }

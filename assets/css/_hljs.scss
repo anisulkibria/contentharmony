@@ -4,22 +4,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
 .hljs {
-    @apply block;
-    color: #66645c;
+    @apply block text-gray-600;
     -webkit-text-size-adjust: none;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
     .hljs {
-        color: #c7c6bc;
+        @apply text-yellow-50;
     }
 }
 
 .hljs-comment,
 .diff .hljs-header,
 .hljs-javadoc {
-    @apply italic;
-    color: #998;
+    @apply italic text-yellow-100;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -27,7 +25,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-comment,
     .diff .hljs-header,
     .hljs-javadoc {
-        color: #65655f;
+        @apply text-gray-600;
     }
 }
 
@@ -38,8 +36,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-subst,
 .hljs-request,
 .hljs-status {
-    @apply font-bold;
-    color: #333;
+    @apply font-bold text-gray-700;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -51,14 +48,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-subst,
     .hljs-request,
     .hljs-status {
-        color: #bbb;
+        @apply text-gray-300;
     }
 }
 
 .hljs-number,
 .hljs-hexcolor,
 .ruby .hljs-constant {
-    color: #008080;
+    @apply text-green-700;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -66,7 +63,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-number,
     .hljs-hexcolor,
     .ruby .hljs-constant {
-        color: #25b7b7;
+        @apply text-green-500;
     }
 }
 
@@ -75,7 +72,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-phpdoc,
 .hljs-dartdoc,
 .tex .hljs-formula {
-    color: #d14;
+    @apply text-red-600;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -85,14 +82,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-phpdoc,
     .hljs-dartdoc,
     .tex .hljs-formula {
-        color: #ec2f5e;
+        @apply text-red-500;
     }
 }
 
 .hljs-title,
 .hljs-id,
 .scss .hljs-preprocessor {
-    color: #900;
+    @apply text-red-800;
     font-weight: bold;
 }
 
@@ -101,7 +98,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-title,
     .hljs-id,
     .scss .hljs-preprocessor {
-        color: #e42a2a;
+        @apply text-red-600;
     }
 }
 
@@ -114,8 +111,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-type,
 .vhdl .hljs-literal,
 .tex .hljs-command {
-    @apply font-bold;
-    color: #458;
+    @apply font-bold text-indigo-500;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -124,7 +120,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-type,
     .vhdl .hljs-literal,
     .tex .hljs-command {
-        color: #647ecc;
+        @apply text-indigo-400;
     }
 }
 
@@ -132,7 +128,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-tag .hljs-title,
 .hljs-rule .hljs-property,
 .django .hljs-tag .hljs-keyword {
-    color: #000080;
+    @apply text-blue-900;
     font-weight: normal;
 }
 
@@ -142,7 +138,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-tag .hljs-title,
     .hljs-rule .hljs-property,
     .django .hljs-tag .hljs-keyword {
-        color: #536cf3;
+        @apply text-blue-500;
     }
 }
 
@@ -150,7 +146,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-variable,
 .lisp .hljs-body,
 .hljs-name {
-    color: #008080;
+    @apply text-green-700;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -159,17 +155,17 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-variable,
     .lisp .hljs-body,
     .hljs-name {
-        color: #25b7b7;
+        @apply text-green-400;
     }
 }
 
 .hljs-regexp {
-    color: #009926;
+    @apply text-green-600;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
     .hljs-regexp {
-        color: #61d27c;
+        @apply text-green-400;
     }
 }
 
@@ -180,16 +176,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .scheme .hljs-keyword,
 .tex .hljs-special,
 .hljs-prompt {
-    color: #990073;
+    @apply text-pink-800;
 }
 
 .hljs-built_in {
-    color: #0086b3;
+    @apply text-blue-600;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
     .hljs-built_in {
-        color: #3cb1d8;
+        @apply text-blue-400;
     }
 }
 
@@ -199,8 +195,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-doctype,
 .hljs-shebang,
 .hljs-cdata {
-    @apply font-bold;
-    color: #999;
+    @apply font-bold text-gray-400;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -211,29 +206,27 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-doctype,
     .hljs-shebang,
     .hljs-cdata {
-        color: #666;
+        @apply text-gray-500;
     }
 }
 
 .hljs-deletion {
-    background: #fdd;
+    @apply bg-red-100;
 }
 
 .hljs-addition {
-    background: #dfd;
+    @apply bg-green-100;;
 }
 
 .diff .hljs-change {
-    background: #0086b3;
+    @apply bg-blue-400;
 }
 
 .hljs-chunk {
-    color: #aaa;
+    @apply text-gray-400;
 }
 
 :root {
     --font-primary: "Fira Sans", sans-serif;
-    --font-secondary: "Libre Baskerville", serif;
-    --ch-blue: #0a56c7;
-    --ch-blue-dark: #094bad;
+    --font-secondary: "Libre Baskerville", serif;;
 }

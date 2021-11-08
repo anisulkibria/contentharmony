@@ -14,14 +14,12 @@
   }
   
   .post-content figure figcaption:after {
-    @apply no-content absolute left-0 bottom-0 w-32;
-    height: 1px;
-    background: #e1e3e6;
+    @apply no-content absolute left-0 bottom-0 w-32 height-1px bg-gray-200;
   }
   
   @media (prefers-color-scheme: darkdisabled) {
     .post-content figure figcaption:after {
-      background: #3b3d40;
+      @apply bg-gray-700;
     }
   }
   
@@ -179,16 +177,15 @@
   }
   
   .post-content .kg-bookmark-container {
-    @apply flex no-underline overflow-hidden;
+    @apply flex no-underline overflow-hidden bg-gray-100;
     min-height: 8em;
-    background: #f7f8fa;
     border: 1px solid #e1e3e6;
     box-shadow: none !important;
   }
   
   @media (prefers-color-scheme: darkdisabled) {
     .post-content .kg-bookmark-container {
-      background: #222426;
+      @apply bg-gray-800;
       border-color: #3b3d40;
     }
   }

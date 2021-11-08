@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .blog-header {
-    @apply relative hidden bg-blue p-big mb-default text-shadow-default;
+    @apply relative hidden bg-blue-700 p-big mb-default text-shadow-default;
 }
 
 .blog-header .post-title {
@@ -15,19 +15,11 @@
 }
 
 .blog-cover {
-    @apply absolute w-full h-full left-0 top-0 flex items-center z-5;
-    background: no-repeat scroll center center / cover #000;
-    animation: 0.5s ease-in forwards fadein;
+    @apply absolute w-full h-full left-0 top-0 flex items-center z-5 cover-bg cover-anim;
 }
 
 .blog-cover:after {
     @apply absolute w-full left-0 bottom-0 h-2/3 z-8 no-content;
-    background: -webkit-linear-gradient(top,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0.333) 100%);
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0.333) 100%);
 }
 
 .blog-cover img {
@@ -71,7 +63,7 @@
 }
 
 .archive.archive-box {
-    padding-bottom: calc(4rem + 2vw);
+    @apply pb-calc-4rem-2vw;
 }
 
 .archive .archive-info {
@@ -87,9 +79,7 @@
 }
 
 .archive .archive-info .archive-count:after {
-    @apply absolute -left-8 w-4 top-2/4 no-content;
-    height: 1px;
-    background: #c4c7cc;
+    @apply absolute -left-8 w-4 top-2/4 no-content height-1px bg-gray-300;
 }
 
 .archive .archive-title {
