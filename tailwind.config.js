@@ -9,6 +9,7 @@ module.exports = {
       extend: {
         colors: {
           'white': '#ffffff',
+          'primary': '#0a56c7',
         },
       },
       container: {

@@ -1,12 +1,10 @@
 .avatar {
-    @apply relative overflow-hidden m-0 box-border bg-gray-100;
-    border: 2px solid #e1e3e6;
+    @apply relative overflow-hidden m-0 box-border bg-gray-100 border-2px-solid-gray-200;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
     .avatar {
-        @apply bg-gray-700;
-        border-color: #3b3d40;
+        @apply bg-gray-700 border-gray-700;
     }
 }
 

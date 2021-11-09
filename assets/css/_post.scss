@@ -195,7 +195,7 @@
 
     .post-share a:focus,
     .post-share a:hover {
-        background-color: var(--color-primary-active);
+        @apply bg-primary;
     }
 }
 
@@ -239,17 +239,16 @@
 }
 
 .post-tags a {
-    @apply inline-block py-0 px-6 font-medium text-center no-underline text-white box-border whitespace-nowrap text-1_6em leading-3rem;
+    @apply inline-block py-0 px-6 font-medium text-center no-underline text-white box-border whitespace-nowrap text-1_6em leading-3rem bg-primary;
     margin-right: 0.5em;
     margin-bottom: 0.5em;
-    background: var(--color-primary);
     border-radius: 2em;
     transition: all ease 0.2s;
 }
 
 .post-tags a:focus,
 .post-tags a:hover {
-    background: var(--color-primary-active);
+    @apply text-primary;
 }
 
 /* ==========================================================================
@@ -326,7 +325,7 @@
 
 @media (prefers-color-scheme: darkdisabled) {
     .post-nav {
-        border-color: #3b3d40;
+        @apply border-gray-700;
     }
 }
 
@@ -372,7 +371,7 @@
 .post-nav-next:hover i,
 .post-nav-prev:focus i,
 .post-nav-prev:hover i {
-    color: var(--color-primary-active);
+    @apply text-primary;
 }
 
 .post-nav-next {
@@ -509,15 +508,13 @@
 
 @media (prefers-color-scheme: darkdisabled) {
     .pagination a {
-        border-color: #909499;
-        color: #c4c7cc;
+        @apply border-gray-400 text-gray-300;
     }
 }
 
 .pagination a:focus,
 .pagination a:hover {
-    color: var(--color-primary-active);
-    border-color: var(--color-primary-active);
+    @apply text-primary border-primary;
 }
 
 .pagination .pagination-prev {
@@ -574,7 +571,7 @@
 
 @media (prefers-color-scheme: darkdisabled) {
     .paged .extra-pagination .pagination-box {
-        border-color: #3b3d40;
+        @apply border-gray-700;
     }
 }
 
@@ -816,7 +813,7 @@ post-content input[type="reset"],
 
 @media (prefers-color-scheme: darkdisabled) {
     .post-comments {
-        border-color: #3b3d40;
+        @apply border-gray-700;
     }
 }
 
@@ -827,8 +824,7 @@ post-content input[type="reset"],
 
 @media (prefers-color-scheme: darkdisabled) {
     .post-comments.activated {
-        @apply bg-gray-800;
-        border-color: #3b3d40;
+        @apply bg-gray-800 border-gray-700;
     }
 }
 
@@ -854,15 +850,13 @@ post-content input[type="reset"],
 
 @media (prefers-color-scheme: darkdisabled) {
     .post-comments-activate {
-        border-color: #909499;
-        color: #c4c7cc;
+        @apply border-gray-400 text-gray-300;
     }
 }
 
 .post-comments-activate:focus,
 .post-comments-activate:hover {
-    color: var(--color-primary-active);
-    border-color: var(--color-primary-active);
+    @apply text-primary border-primary;
 }
 
 .activated .post-comments-activate {

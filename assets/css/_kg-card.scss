@@ -185,8 +185,7 @@
   
   @media (prefers-color-scheme: darkdisabled) {
     .post-content .kg-bookmark-container {
-      @apply bg-gray-800;
-      border-color: #3b3d40;
+      @apply bg-gray-800 border-gray-700;
     }
   }
   
@@ -257,7 +256,7 @@
   }
   
   .post-content .kg-bookmark-publisher {
-    color: var(--color-primary);
+    @apply text-primary;
   }
   
   @media (max-width: 640px) {

@@ -95,8 +95,7 @@
 }
 
 .archive .archive-links a {
-    @apply text-white;
-    transition: color linear 0.1s;
+    @apply text-white transition-cl-0_1s;
 }
 
 .archive .archive-links a:focus,
@@ -126,8 +125,7 @@
 }
 
 .page-wrapper {
-    @apply flex flex-col relative pr-0;
-    min-height: 100vh;
+    @apply flex flex-col relative pr-0 min-h-100vh;
 }
 
 .inner {
@@ -142,6 +140,5 @@
 }
 
 .innerwide {
-    @apply my-0 mx-auto py-0 px-12;
-    max-width: 1200px;
+    @apply my-0 mx-auto py-0 px-12 max-w-1200px;
 }
