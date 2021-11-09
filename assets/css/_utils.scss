@@ -225,3 +225,27 @@
 .border-2px-solid-gray-200 {
     border: 2px solid #E4E7EB;
 }
+.optimizeLegibility {
+    text-rendering: optimizeLegibility;
+}
+.bottom-32_5- {
+    bottom: 32.5%;
+}
+.w-80p {
+    width: 80%;
+}
+.left-10p {
+    left: 10%;
+}
+.max-w-250px {
+    max-width: 250px;
+}
+.footer-bg {
+    background: linear-gradient(0deg, #004ec2 0%, #0a56c7 35%, #1d70eb 100%);
+}
+.footer-mt {
+    margin-top: calc(theme('spacing.32') + 4vw);
+}
+.footer-inner-max-w {
+    max-width: calc(96rem + 8vw);
+}

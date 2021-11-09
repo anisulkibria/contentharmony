@@ -287,8 +287,7 @@
 }
 
 .post-subscribe .button {
-    @apply bg-white py-4 px-12 my-8 mx-auto block text-center no-underline rounded-sm bg-blue-600;
-    width: 80%;
+    @apply bg-white py-4 px-12 my-8 mx-auto block text-center no-underline rounded-sm bg-blue-600 w-80p;
 }
 
 .post-subscribe .button:hover {

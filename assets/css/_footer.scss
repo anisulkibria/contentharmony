@@ -1,13 +1,10 @@
 // Footer
 
 .footer-container {
-    @apply bg-blue-700;
-    background: linear-gradient(0deg, #004ec2 0%, #0a56c7 35%, #1d70eb 100%);
-    margin-top: calc(theme('spacing.32') + 4vw);
+    @apply bg-blue-700 footer-bg footer-mt;
 
     .logo img {
-        @apply w-full mt-6;
-        max-width: 250px;
+        @apply w-full mt-6 max-w-250px;
     }
 
     hr {
@@ -23,8 +20,7 @@
     @apply py-16 px-0 text-white text-1_5em;
 
     .inner {
-        @apply py-0 px-12;
-        max-width: calc(96rem + 8vw);
+        @apply py-0 px-12 footer-inner-max-w;
     }
 
     ul {
@@ -102,8 +98,7 @@
     @apply flex-shrink-0 block ml-auto leading-8 text-1_5em text-gray-300;
 
     a {
-        @apply no-underline font-medium;
-        color: inherit;
+        @apply no-underline font-medium text-inherit;
     }
 }
 

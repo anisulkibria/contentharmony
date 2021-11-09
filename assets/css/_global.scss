@@ -11,10 +11,7 @@ html.menu-active {
 }
 
 body {
-    @apply font-normal overflow-x-hidden bg-white font-primary text-1em leading-1_75em text-gray-800;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @apply font-normal overflow-x-hidden bg-white font-primary text-1em leading-1_75em text-gray-800 antialiased optimizeLegibility;
 }
 
 @media (prefers-color-scheme: darkdisabled) {

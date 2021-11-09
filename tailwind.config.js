@@ -10,6 +10,7 @@ module.exports = {
         colors: {
           'white': '#ffffff',
           'primary': '#0a56c7',
+          'inherit': 'inherit',
         },
       },
       container: {

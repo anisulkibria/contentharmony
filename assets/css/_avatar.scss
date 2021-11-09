@@ -10,9 +10,7 @@
 
 .avatar:after,
 .avatar:before {
-    @apply no-content absolute box-border z-1 w-2/4 h-2/4 left-1/4 bg-gray-50;
-    bottom: 32.5%;
-    border-radius: 100%;
+    @apply no-content absolute box-border z-1 w-2/4 h-2/4 left-1/4 bg-gray-50 bottom-32_5- rounded-full;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -24,9 +22,7 @@
 }
 
 .avatar:after {
-    @apply -bottom-1/4;
-    width: 80%;
-    left: 10%;
+    @apply -bottom-1/4 w-80p left-10p;
 }
 
 .avatar img {
