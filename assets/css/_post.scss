@@ -173,10 +173,9 @@
 }
 
 .post-share a {
-    @apply block w-12 h-12 p-0 text-center no-underline text-white text-1_6em leading-3rem;
+    @apply block w-12 h-12 p-0 text-center no-underline text-white text-1_6em leading-3rem transition-all-e-0_2s;
     margin-right: 0.5em;
     border-radius: 2em;
-    transition: all ease 0.2s;
 }
 
 @media only screen and (max-width: 640px) {
@@ -239,11 +238,10 @@
 }
 
 .post-tags a {
-    @apply inline-block py-0 px-6 font-medium text-center no-underline text-white box-border whitespace-nowrap text-1_6em leading-3rem bg-primary;
+    @apply inline-block py-0 px-6 font-medium text-center no-underline text-white box-border whitespace-nowrap text-1_6em leading-3rem bg-primary transition-all-e-0_2s;
     margin-right: 0.5em;
     margin-bottom: 0.5em;
     border-radius: 2em;
-    transition: all ease 0.2s;
 }
 
 .post-tags a:focus,
@@ -259,10 +257,9 @@
 }
 
 .gh-post-upgrade-cta .gh-post-upgrade-cta-content .gh-btn {
-    @apply py-4 px-8 rounded-lg font-bold;
+    @apply py-4 px-8 rounded-lg font-bold transition-all-eo-0_2s;
     color: #fff !important;
     background: #222426 !important;
-    transition: all ease-out 0.2s;
 }
 
 .gh-post-upgrade-cta .gh-post-upgrade-cta-content .gh-btn:focus,
@@ -430,8 +427,7 @@
 }
 
 .post-nav i {
-    @apply absolute top-2/4 w-16 h-16 -mt-8 text-center text-6xlp leading-4rem text-gray-100;
-    transition: all ease-out 0.2s;
+    @apply absolute top-2/4 w-16 h-16 -mt-8 text-center text-6xlp leading-4rem text-gray-100 transition-all-eo-0_2s;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -499,10 +495,9 @@
 }
 
 .pagination a {
-    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border z-100 leading-4rem rounded-sm text-1_6em;
+    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border z-100 leading-4rem rounded-sm text-1_6em transition-all-e-0_2s;
     border: 1px solid #c4c7cc;
     color: #73777d;
-    transition: all ease 0.2s;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -840,10 +835,9 @@ post-content input[type="reset"],
 }
 
 .post-comments-activate {
-    @apply inline-block h-16 my-8 mx-0 py-0 px-8 font-medium text-center cursor-pointer text-1_6em;
+    @apply inline-block h-16 my-8 mx-0 py-0 px-8 font-medium text-center cursor-pointer text-1_6em transition-all-e-0_2s;
     border: 1px solid #c4c7cc;
     color: #73777d;
-    transition: all ease 0.2s;
     border-radius: 2em;
 }
 

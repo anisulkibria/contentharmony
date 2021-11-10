@@ -204,12 +204,14 @@
     -webkit-hyphens: auto;
     hyphens: auto;
 }
+// Padding
 .pb-calc-4rem-2vw {
     padding-bottom: calc(4rem + 2vw);
 }
 .pt-calc-4rem-2vw {
     padding-top: calc(4rem + 2vw);
 }
+// Min Max Height Width
 .height-1px {
     height: 1px;
 }
@@ -219,8 +221,24 @@
 .max-w-1200px {
     max-width: 1200px;
 }
+// Transition
 .transition-cl-0_1s {
     transition: color linear 0.1s;
+}
+.transition-all-l-0_1s {
+    transition: all linear 0.1s;
+}
+.transition-all-eo-0_1s {
+    transition: all ease-out 0.1s;
+}
+.transition-all-eo-0_2s {
+    transition: all ease-out 0.2s;
+}
+.transition-all-e-0_2s {
+    transition: all ease 0.2s;
+}
+.transition-all-eo-0_3s {
+    transition: all ease-out 0.3s;
 }
 .border-2px-solid-gray-200 {
     border: 2px solid #E4E7EB;

@@ -1,20 +1,17 @@
 // Navigation
 
 .nav-header {
-    @apply absolute top-0 left-0 w-full text-white z-400;
-    transition: all ease-out 0.3s;
+    @apply absolute top-0 left-0 w-full text-white z-400 transition-all-eo-0_3s;
 
     .nav-wrapper-control {
-        @apply absolute left-0 top-full w-full cursor-pointer hidden box-border text-white z-500;
-        transition: all linear 0.1s;
+        @apply absolute left-0 top-full w-full cursor-pointer hidden box-border text-white z-500 transition-all-l-0_1s;
 
         .inner {
             @apply flex justify-between;
 
             a {
-                @apply relative block w-full py-8 px-0 leading-8 text-1_8rem;
+                @apply relative block w-full py-8 px-0 leading-8 text-1_8rem transition-all-eo-0_1s;
                 color: inherit;
-                transition: all ease-out 0.1s;
 
                 i {
                     @apply inline-block w-16;
@@ -169,8 +166,7 @@
 
 .nav-header li {
     a {
-        @apply block py-4 px-0 leading-8 text-white whitespace-nowrap no-underline font-normal cursor-pointer overflow-ellipsis text-1_6em;
-        transition: color linear 0.1s;
+        @apply block py-4 px-0 leading-8 text-white whitespace-nowrap no-underline font-normal cursor-pointer overflow-ellipsis text-1_6em transition-cl-0_1s;
 
         &:focus,
         &:hover {

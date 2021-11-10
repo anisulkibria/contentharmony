@@ -24,7 +24,7 @@ button,
 input,
 select,
 textarea {
-    transition: all ease-out 0.2s;
+    @apply transition-all-eo-0_2s;
 }
 
 hr {
@@ -50,11 +50,10 @@ hr.small {
 }
 
 .post-content a {
-    @apply font-normal;
+    @apply font-normal transition-all-eo-0_1s;
     color: inherit;
     text-decoration: none;
     box-shadow: inset 0 -2px 0 var(--color-primary);
-    transition: all ease-out 0.1s;
 }
 
 .post-content a:focus,
@@ -383,8 +382,7 @@ hr.small {
 .post-content input[type="number"],
 .post-content input[type="search"],
 .post-content input[type="password"] {
-    @apply w-full h-auto p-4 box-border outline-none shadow-none bg-gray-50 text-gray-900;
-    transition: all ease-out 0.1s;
+    @apply w-full h-auto p-4 box-border outline-none shadow-none bg-gray-50 text-gray-900 transition-all-eo-0_1s;
     -webkit-appearance: normal;
     appearance: normal;
     border: 1px solid #e1e3e6;
@@ -469,11 +467,10 @@ hr.small {
 .post-content input[type="button"],
 .post-content button,
 .post-content .button {
-    @apply block w-full p-4 border-0 box-border font-semibold text-white no-underline text-center cursor-pointer bg-primary;
+    @apply block w-full p-4 border-0 box-border font-semibold text-white no-underline text-center cursor-pointer bg-primary transition-all-eo-0_1s;
     border-radius: 4rem;
     -webkit-appearance: normal;
     appearance: normal;
-    transition: all ease-out 0.1s;
 }
 
 .post-content input[type="reset"]:hover,
