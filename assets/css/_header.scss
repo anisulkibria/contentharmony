@@ -114,8 +114,7 @@
 }
 
 .archive.archive-author .archive-avatar {
-    @apply absolute top-0 left-8 w-40 h-40 hidden;
-    border-radius: 8rem;
+    @apply absolute top-0 left-8 w-40 h-40 hidden rounded-8rem;
 }
 
 @media only screen and (max-width: 640px) {

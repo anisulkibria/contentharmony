@@ -27,9 +27,7 @@
   */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-    @apply not-italic inline-block text-center normal-case leading-1em;
-    font-family: "icon";
-    font-weight: normal;
+    @apply not-italic inline-block text-center normal-case leading-1em font-normal font-icon;
     speak: none;
     text-decoration: inherit;
     width: 1em;

@@ -4,8 +4,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
 .hljs {
-    @apply block text-gray-600;
-    -webkit-text-size-adjust: none;
+    @apply block text-gray-600 .-wk-txt-adj-none;
 }
 
 @media (prefers-color-scheme: darkdisabled) {

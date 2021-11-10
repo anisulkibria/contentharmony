@@ -10,7 +10,7 @@
 }
 
 .container .post .post-box .post-title {
-  color: #222426;
+  @apply text-gray-800;
 }
 
 #index .post-title {
@@ -18,15 +18,14 @@
 }
 
 .container .post.featured .post-title:after {
-  @apply absolute w-16 h-16 -left-16 top-0 font-normal not-italic text-center text-0_5em;
-  font-family: "icon";
+  @apply absolute w-16 h-16 -left-16 top-0 font-normal not-italic text-center text-0_5em font-icon;
   content: "\e800";
   color: #ffc336;
 }
 
 @media (min-width: 640px) {
     .tag-template .container {
-      max-width: 100%;
+      @apply max-w-full;
   }
 }
 

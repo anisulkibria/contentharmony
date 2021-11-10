@@ -2,8 +2,7 @@
    KG Cards
    ========================================================================== */
 .post-content figure figcaption {
-    @apply relative m-auto leading-2em py-8 px-0 text-0_75em;
-    color: #73777d;
+    @apply relative m-auto leading-2em py-8 px-0 text-0_75em text-gray-500;
     max-width: calc(64rem + 8vw);
   }
   

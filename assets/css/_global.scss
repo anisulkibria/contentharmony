@@ -35,9 +35,8 @@ hr {
 }
 
 hr.small {
-    @apply ml-auto mr-auto;
+    @apply ml-auto mr-auto bg-clip-content;
     padding: 0 30%;
-    background-clip: content-box;
     width: 200px;
 }
 
@@ -50,9 +49,8 @@ hr.small {
 }
 
 .post-content a {
-    @apply font-normal transition-all-eo-0_1s;
+    @apply font-normal no-underline transition-all-eo-0_1s;
     color: inherit;
-    text-decoration: none;
     box-shadow: inset 0 -2px 0 var(--color-primary);
 }
 
@@ -383,8 +381,6 @@ hr.small {
 .post-content input[type="search"],
 .post-content input[type="password"] {
     @apply w-full h-auto p-4 box-border outline-none shadow-none bg-gray-50 text-gray-900 transition-all-eo-0_1s;
-    -webkit-appearance: normal;
-    appearance: normal;
     border: 1px solid #e1e3e6;
 }
 
@@ -467,10 +463,8 @@ hr.small {
 .post-content input[type="button"],
 .post-content button,
 .post-content .button {
-    @apply block w-full p-4 border-0 box-border font-semibold text-white no-underline text-center cursor-pointer bg-primary transition-all-eo-0_1s;
+    @apply block w-full p-4 border-0 box-border font-semibold text-white no-underline text-center cursor-pointer bg-primary transition-all-eo-0_1s appearance-normal;
     border-radius: 4rem;
-    -webkit-appearance: normal;
-    appearance: normal;
 }
 
 .post-content input[type="reset"]:hover,
@@ -487,46 +481,6 @@ hr.small {
 .post-content button:focus,
 .post-content .button:focus {
     @apply bg-primary;
-}
-
-.d-none {
-    display: none !important;
-}
-
-.d-inline {
-    display: inline !important;
-}
-
-.d-inline-block {
-    display: inline-block !important;
-}
-
-.d-block {
-    display: block !important;
-}
-
-.d-table {
-    display: table !important;
-}
-
-.d-table-row {
-    display: table-row !important;
-}
-
-.d-table-cell {
-    display: table-cell !important;
-}
-
-.d-flex {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-}
-
-.d-inline-flex {
-    display: -webkit-inline-box !important;
-    display: -ms-inline-flexbox !important;
-    display: inline-flex !important;
 }
 
 .wide {
