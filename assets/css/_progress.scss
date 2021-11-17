@@ -6,10 +6,9 @@
 }
 
 .progress-container.complete {
-    transform: translateY(-3px);
+    @apply transform-progress;
 }
 
 .progress-bar {
-    @apply block w-0 bg-primary;
-    height: 3px;
+    @apply block w-0 bg-primary h-3px;
 }

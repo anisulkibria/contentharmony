@@ -44,7 +44,7 @@
 				{{/foreach}}
 			</div>
 			<h4 class="post-meta-author">{{authors separator=", "}}</h4>
-      📅&nbsp;<time title="Last Updated at" datetime="{{date updated_at format='DD-MM-YYYY'}}">{{date updated_at format="MMMM DD, YYYY"}}</time> &nbsp;&nbsp; ⏱&nbsp;{{reading_time minute=(t "1 min read") minutes=(t "% min read")}} <span class="ml-1">💬</span> <a href="#comments"><div id="fastcomments-widget-comment-count" class="d-inline"></div></a>
+      📅&nbsp;<time title="Last Updated at" datetime="{{date updated_at format='DD-MM-YYYY'}}">{{date updated_at format="MMMM DD, YYYY"}}</time> &nbsp;&nbsp; ⏱&nbsp;{{reading_time minute=(t "1 min read") minutes=(t "% min read")}} <span class="ml-1">💬</span> <a href="#comments"><div id="fastcomments-widget-comment-count" class="inline-imp"></div></a>
 			<script src="https://cdn.fastcomments.com/js/widget-comment-count.min.js"></script>
 			<script>
 			    FastCommentsCommentCount(document.getElementById('fastcomments-widget-comment-count'), {

@@ -1,7 +1,9 @@
-// Footer
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
 .footer-container {
-    @apply bg-blue-700 footer-bg footer-mt;
+    @apply bg-blue-700 bg-footer footer-mt;
 
     .logo img {
         @apply w-full mt-6 max-w-250px;

@@ -42,16 +42,16 @@ template {
 }
 
 a {
-    background: 0 0;
+    @apply bg-00;
 }
 
 a:active,
 a:hover {
-    outline: 0;
+    @apply outline-0;
 }
 
 abbr[title] {
-    border-bottom: 1px dotted;
+    @apply border-b border-dotted;
 }
 
 b,
@@ -64,13 +64,11 @@ dfn {
 }
 
 h1 {
-    @apply text-2em;
-    margin: 0.67em 0;
+    @apply text-2em my-0_67em mx-0;
 }
 
 mark {
-    @apply bg-yellow-400;
-    color: #000;
+    @apply bg-yellow-400 text-black;
 }
 
 small {
@@ -99,12 +97,11 @@ svg:not(:root) {
 }
 
 figure {
-    margin: 1em 40px;
+    @apply my-1em mx-40px;
 }
 
 hr {
-    @apply box-content h-0;
-    -moz-box-sizing: content-box;
+    @apply box-content h-0 moz-box-content;
 }
 
 pre {
@@ -123,9 +120,7 @@ input,
 optgroup,
 select,
 textarea {
-    @apply m-0;
-    color: inherit;
-    font: inherit;
+    @apply m-0 text-inherit font-inherit;
 }
 
 button {
@@ -170,21 +165,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="search"] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    @apply box-content;
+    @apply content-box-prefix box-content;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+    @apply webkit-appearance-none;
 }
 
 fieldset {
-    border: 1px solid silver;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
+    @apply border border-solid border-gray-300 my-0 mx-2px p-fieldset;
 }
 
 legend {
@@ -200,8 +190,7 @@ optgroup {
 }
 
 table {
-    @apply border-collapse;
-    border-spacing: 0;
+    @apply border-collapse b-spacing-0;
 }
 
 td,

@@ -54,9 +54,7 @@
 }
 
 .post-title a {
-    @apply no-underline;
-    color: inherit;
-    font-weight: inherit;
+    @apply no-underline text-inherit font-w-inherit;
 }
 
 .post-header .post-title {
@@ -74,8 +72,7 @@
 }
 
 .post-meta a {
-    @apply inline-block no-underline;
-    color: inherit;
+    @apply inline-block no-underline text-inherit;
 }
 
 .post-meta a:focus,
@@ -96,9 +93,7 @@
 }
 
 .post-header .post-meta .post-meta-avatars:after {
-    @apply no-content;
-    clear: both;
-    display: table;
+    @apply no-content clear-both table;
 }
 
 .post-header .post-meta .post-meta-avatars .post-meta-avatar {
@@ -156,38 +151,32 @@
 }
 
 .post-info-label {
-    @apply font-normal leading-3rem text-1_6em;
-    margin-right: 0.75em;
-    color: #73777d;
+    @apply font-normal leading-3rem text-1_6em mr-0_75em text-gray-500;;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
     .post-info-label {
-        color: #909499;
+        @apply text-gray-400;
     }
 }
 
 .post-share {
-    @apply relative my-0 mx-auto flex content-center;
-    margin-bottom: 1em;
+    @apply relative my-0 mx-auto flex content-center mb-1em;
 }
 
 .post-share a {
-    @apply block w-12 h-12 p-0 text-center no-underline text-white text-1_6em leading-3rem transition-all-e-0_2s;
-    margin-right: 0.5em;
-    border-radius: 2em;
+    @apply block w-12 h-12 p-0 text-center no-underline text-white text-1_6em leading-3rem transition-all-e-0_2s rounded-2em mr-0_5em;
 }
 
 @media only screen and (max-width: 640px) {
     .post-share a {
-        @apply ml-0;
-        margin-right: 0.66667em;
+        @apply ml-0 mr-0_66em;
     }
 }
 
 .post-share a:focus,
 .post-share a:hover {
-    background-color: #222426;
+    @apply bg-gray-800;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -203,7 +192,7 @@
 }
 
 .post-share a i {
-    color: inherit;
+    @apply text-inherit;
 }
 
 .post-share a i:before {
@@ -211,24 +200,23 @@
 }
 
 .post-share .twitter {
-    background-color: #3ea9dd;
+    @apply bg-twitter;
 }
 
 .post-share .facebook {
-    background-color: #3c5a98;
+    @apply bg-facebook;
 }
 
 .post-share .linkedin {
-    background-color: #0e76a8;
+    @apply bg-linkedin;
 }
 
 .post-share .email {
-    background-color: #2997ee;
+    @apply bg-email;
 }
 
 .post-tags {
-    @apply relative float-left flex flex-wrap;
-    max-width: 66.66666%;
+    @apply relative float-left flex flex-wrap max-w-66pr;
 }
 
 @media only screen and (max-width: 640px) {
@@ -238,10 +226,7 @@
 }
 
 .post-tags a {
-    @apply inline-block py-0 px-6 font-medium text-center no-underline text-white box-border whitespace-nowrap text-1_6em leading-3rem bg-primary transition-all-e-0_2s;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-    border-radius: 2em;
+    @apply inline-block py-0 px-6 font-medium text-center no-underline text-white box-border whitespace-nowrap text-1_6em leading-3rem bg-primary transition-all-e-0_2s mb-0_5em mr-0_5em rounded-2em;
 }
 
 .post-tags a:focus,
@@ -253,25 +238,20 @@
      Post Subscribe
      ========================================================================== */
 .gh-post-upgrade-cta .gh-post-upgrade-cta-content {
-    background: var(--color-primary) !important;
+    @apply bg-primary-imp;
 }
 
 .gh-post-upgrade-cta .gh-post-upgrade-cta-content .gh-btn {
-    @apply py-4 px-8 rounded-lg font-bold transition-all-eo-0_2s;
-    color: #fff !important;
-    background: #222426 !important;
+    @apply py-4 px-8 rounded-lg font-bold transition-all-eo-0_2s text-white-imp bg-gray-800-imp;
 }
 
 .gh-post-upgrade-cta .gh-post-upgrade-cta-content .gh-btn:focus,
 .gh-post-upgrade-cta .gh-post-upgrade-cta-content .gh-btn:hover {
-    opacity: inherit;
-    background: #000 !important;
+    @apply opacity-inherit bg-black-imp;
 }
 
 .post-subscribe {
-    @apply relative py-16 px-8 my-32 -mx-32 text-white box-border overflow-hidden rounded-sm text-2xl bg-blue-600;
-    background: linear-gradient(315deg, #004ec2 0%, #0a56c7 35%, #1d70eb 100%);
-    filter: drop-shadow(rgba(84, 70, 35, 0.3) 0px 6px 20px);
+    @apply relative py-16 px-8 my-32 -mx-32 text-white box-border overflow-hidden rounded-sm text-2xl bg-blue-600 bg-post-subs;
 }
 
 .post-subscribe h2 {
@@ -279,27 +259,24 @@
 }
 
 .post-subscribe p {
-    @apply leading-1_33em text-1_2em;
-    margin: 0 auto 1.33334em;
+    @apply leading-1_33em text-1_2em mt-0 mx-auto mb-1_33em;
 }
 
 .post-subscribe .button {
-    @apply bg-white py-4 px-12 my-8 mx-auto block text-center no-underline rounded-sm bg-blue-600 w-80p;
+    @apply bg-white py-4 px-12 my-8 mx-auto block text-center no-underline rounded-sm text-blue-600 w-80p;
 }
 
 .post-subscribe .button:hover {
-    background-color: #f5f5f5;
+    @apply bg-gray-50;
 }
 
 .post-subscribe .cta-image {
-    @apply absolute -right-80 top-16;
-    width: 70%;
+    @apply absolute -right-80 top-16 w-70pr;
 }
 
 @media only screen and (max-width: 640px) {
     .post-subscribe .cta-image {
-        @apply w-full mt-8;
-        position: inherit;
+        @apply w-full mt-8 position-inherit;
     }
 }
 
@@ -313,10 +290,7 @@
      Post Nav
      ========================================================================== */
 .post-nav {
-    @apply relative;
-    margin-top: -1px;
-    border-top: 1px solid #e1e3e6;
-    border-bottom: 1px solid #e1e3e6;
+    @apply relative -mt-1px border-t border-b border-solid border-gray-100;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -326,8 +300,7 @@
 }
 
 .post-nav:after {
-    @apply absolute h-full left-1/2 top-0 z-2 no-content bg-gray-100;
-    width: 1px;
+    @apply absolute h-full left-1/2 top-0 z-2 no-content bg-gray-100 w-1px;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -344,8 +317,7 @@
 
 .post-nav-next,
 .post-nav-prev {
-    @apply no-underline block w-1/2;
-    color: inherit;
+    @apply no-underline block w-1/2 text-inherit;
 }
 
 @media only screen and (max-width: 640px) {
@@ -360,7 +332,7 @@
 .post-nav-next:hover,
 .post-nav-prev:focus,
 .post-nav-prev:hover {
-    color: inherit;
+    @apply text-inherit;
 }
 
 .post-nav-next:focus i,
@@ -399,24 +371,20 @@
 }
 
 .post-nav-label {
-    @apply text-1_3rem;
-    color: #898b8f;
+    @apply text-1_3rem text-gray-400;
 }
 
 .post-nav-teaser {
-    @apply relative py-8 px-0;
-    min-height: 8rem;
+    @apply relative py-8 px-0 min-h-8rem;
 }
 
 @media only screen and (max-width: 640px) {
     .post-nav-teaser {
-        min-height: 4em;
-        padding: 2em 0;
+        @apply min-h-4em py-2em px-0;
     }
 
     .post-nav-teaser:after {
-        @apply absolute w-full left-0 bottom-0 z-2 no-content height-1px bg-gray-100;
-        margin-bottom: -1px;
+        @apply absolute w-full left-0 bottom-0 z-2 no-content h-1px bg-gray-100 -mb-1px border border-solid border-gray-200;
     }
 }
 
@@ -449,10 +417,8 @@
 }
 
 .post-nav-title {
-    @apply mx-0 mb-1 mt-0 p-0 text-black text-2em leading-3rem;
-    color: inherit;
+    @apply mx-0 mb-1 mt-0 p-0 text-black text-2em leading-3rem text-inherit webkit-box;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -462,19 +428,17 @@
 }
 
 .post-nav-excerpt {
-    @apply mt-0 mx-0 mb-4 leading-10 font-secondary text-1_5em;
+    @apply mt-0 mx-0 mb-4 leading-10 font-secondary text-1_5em webkit-box-2;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
 }
 
 .post-nav-meta {
-    @apply m-0 leading-8 text-1_6em;
-    color: #73777d;
+    @apply m-0 leading-8 text-1_6em text-gray-500;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
     .post-nav-meta {
-        color: #909499;
+        @apply text-gray-400;
     }
 }
 
@@ -486,8 +450,7 @@
 }
 
 .pagination .pagination-box {
-    padding-top: calc(2rem + 1vw);
-    padding-bottom: calc(2rem + 1vw);
+    @apply p-pagi-box;
 }
 
 .pagination .pagination-box:after {
@@ -495,9 +458,7 @@
 }
 
 .pagination a {
-    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border z-100 leading-4rem rounded-sm text-1_6em transition-all-e-0_2s;
-    border: 1px solid #c4c7cc;
-    color: #73777d;
+    @apply relative block h-16 -my-4 mx-0 py-0 px-8 font-medium text-center no-underline box-border z-100 leading-4rem rounded-sm text-1_6em transition-all-e-0_2s border border-solid border-gray-200 text-gray-500;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -520,8 +481,7 @@
 }
 
 .pagination .pagination-label {
-    @apply relative inline-block;
-    top: -1px;
+    @apply relative inline-block -top-1px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -531,9 +491,7 @@
 }
 
 .pagination a i {
-    @apply relative w-auto my-auto mx-1 leading-0_75em text-1_33em;
-    top: 1px;
-    color: inherit;
+    @apply relative w-auto my-auto mx-1 leading-0_75em text-1_33em text-inherit top-1px;
 }
 
 .pagination a i:before {
@@ -541,13 +499,12 @@
 }
 
 .pagination .pagination-info {
-    @apply absolute w-full h-16 left-0 z-50 block text-center text-1_6em leading-4rem;
-    color: #73777d;
+    @apply absolute w-full h-16 left-0 z-50 block text-center text-1_6em leading-4rem text-gray-500;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
     .pagination .pagination-info {
-        color: #909499;
+        @apply text-gray-400;
     }
 }
 
@@ -560,7 +517,7 @@
 }
 
 .paged .extra-pagination .pagination-box {
-    border-bottom: 1px solid #e1e3e6;
+    @apply border-b border-solid border-gray-100;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -592,34 +549,20 @@ post-content input[type="reset"],
 .post-content input[type="button"],
 .post-content button,
 .post-content .button {
-    margin-bottom: 1em;
+    @apply mb-1em;
 }
 
 .post img,
 .post img {
-    @apply rounded-sm;
-    filter: drop-shadow(rgba(84, 70, 35, 0.3) 0px 6px 20px);
-}
-
-.circle {
-    border-radius: 50% !important;
-}
-
-.noshadow {
-    filter: none !important;
-    box-shadow: none !important;
+    @apply rounded-sm drop-shadow-post-img;
 }
 
 .tile {
-    @apply mb-8 rounded;
-    border: 1px solid #dae4e9;
-    padding: 2em;
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    @apply mb-8 rounded p-2em border border-solid border-gray-100 shadow-tile;
 }
 
 .pricing-box ul>li::before {
-    @apply mr-0 no-content;
-    position: inherit;
+    @apply mr-0 no-content position-inherit;
 }
 
 .pricing-box ul {
@@ -627,8 +570,7 @@ post-content input[type="reset"],
 }
 
 .pricing-box ul>li {
-    border-bottom: 1px solid #dae4e9;
-    padding: 0.2em 0;
+    @apply border-b border-solid border-gray-100 py-0_2em px-0;
 }
 
 .justify-content-flex-end {
@@ -640,12 +582,11 @@ post-content input[type="reset"],
 }
 
 .content-marketing-example-metrics img {
-    @apply inline mb-0;
-    max-width: 90px;
+    @apply inline mb-0 max-w-90px;
 }
 
 .content-marketing-example-metrics.cme-small img {
-    max-width: 23%;
+    @apply max-w-23pr;
 }
 
 .content-marketing-tags ul {
@@ -653,7 +594,7 @@ post-content input[type="reset"],
 }
 
 .content-marketing-tags ul li:before {
-    content: none;
+    @apply content-none;
 }
 
 .author-box {
@@ -677,8 +618,7 @@ post-content input[type="reset"],
 }
 
 .badge {
-    @apply inline-block font-bold text-center whitespace-nowrap align-baseline rounded text-85- leading-one;
-    padding: 0.25em 0.4em;
+    @apply inline-block font-bold text-center whitespace-nowrap align-baseline rounded text-85- leading-one py-0_25em px-0_4em;
 }
 
 .badge:empty {
@@ -686,116 +626,94 @@ post-content input[type="reset"],
 }
 
 .btn .badge {
-    @apply relative;
-    top: -1px;
+    @apply relative -top-1px;
 }
 
 .badge-pill {
-    padding-right: 0.6em;
-    padding-left: 0.6em;
-    border-radius: 10rem;
+    @apply pl-0_6em pr-0_6em rounded-10rem;
 }
 
 .badge-primary {
-    @apply text-white;
-    background-color: #0a56c7;
+    @apply text-white bg-blue-700;
 }
 
 .badge-primary-inverted {
-    @apply bg-white;
-    color: #0a56c7;
-    border: 2px solid #0a56c7;
+    @apply bg-white text-blue-700 border-2 border-solid border-blue-700;
 }
 
 .badge-primary[href]:focus,
 .badge-primary[href]:hover {
     @apply text-white no-underline;
-    background-color: #0062cc;
+    @apply bg-blue-600;
 }
 
 .badge-primary-inverted[href]:focus,
 .badge-primary-inverted[href]:hover {
     @apply text-white no-underline;
-    background-color: #0a56c7;
+    @apply bg-blue-600;
 }
 
 .badge-secondary {
-    @apply text-white;
-    background-color: #6c757d;
+    @apply text-white bg-gray-500;
 }
 
 .badge-secondary[href]:focus,
 .badge-secondary[href]:hover {
-    @apply text-white no-underline;
-    background-color: #545b62;
+    @apply text-white no-underline bg-gray-600;
 }
 
 .badge-success {
-    @apply text-white;
-    background-color: #28a745;
+    @apply text-white bg-green-500;
 }
 
 .badge-success[href]:focus,
 .badge-success[href]:hover {
-    @apply text-white no-underline;
-    background-color: #1e7e34;
+    @apply text-white no-underline bg-green-600;
 }
 
 .badge-info {
-    @apply text-white;
-    background-color: #17a2b8;
+    @apply text-white bg-info;
 }
 
 .badge-info[href]:focus,
 .badge-info[href]:hover {
-    @apply text-white no-underline;
-    background-color: #117a8b;
+    @apply text-white no-underline bg-info-hover;
 }
 
 .badge-warning {
-    color: #212529;
-    background-color: #ffc107;
+    @apply text-gray-800 bg-yellow-400;
 }
 
 .badge-warning[href]:focus,
 .badge-warning[href]:hover {
-    @apply no-underline;
-    color: #212529;
-    background-color: #d39e00;
+    @apply no-underline text-gray-900 bg-yellow-500;
 }
 
 .badge-danger {
-    @apply text-white;
-    background-color: #dc3545;
+    @apply text-white bg-red-500;
 }
 
 .badge-danger[href]:focus,
 .badge-danger[href]:hover {
-    @apply text-white no-underline;
-    background-color: #bd2130;
+    @apply text-white no-underline bg-red-600;
 }
 
 .badge-light {
-    color: #212529;
-    background-color: #f8f9fa;
+    @apply text-gray-800 bg-gray-50;
 }
 
 .badge-light[href]:focus,
 .badge-light[href]:hover {
-    @apply no-underline;
-    color: #212529;
-    background-color: #dae0e5;
+    @apply no-underline text-gray-800 bg-gray-100;
 }
 
 .badge-dark {
-    @apply text-white;
-    background-color: #343a40;
+    @apply text-white bg-gray-700;
 }
 
 .badge-dark[href]:focus,
 .badge-dark[href]:hover {
-    @apply text-white no-underline;
-    background-color: #1d2124;
+    @apply text-white no-underline bg-gray-800;
 }
 
 /* ==========================================================================
@@ -812,8 +730,7 @@ post-content input[type="reset"],
 }
 
 .post-comments.activated {
-    @apply bg-gray-50;
-    border: 1px solid #e1e3e6;
+    @apply bg-gray-50 border border-solid border-gray-200;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -835,10 +752,7 @@ post-content input[type="reset"],
 }
 
 .post-comments-activate {
-    @apply inline-block h-16 my-8 mx-0 py-0 px-8 font-medium text-center cursor-pointer text-1_6em transition-all-e-0_2s;
-    border: 1px solid #c4c7cc;
-    color: #73777d;
-    border-radius: 2em;
+    @apply inline-block h-16 my-8 mx-0 py-0 px-8 font-medium text-center cursor-pointer text-1_6em transition-all-e-0_2s rounded-2em border border-solid border-gray-300 text-gray-500;
 }
 
 @media (prefers-color-scheme: darkdisabled) {

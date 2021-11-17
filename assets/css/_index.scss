@@ -1,6 +1,7 @@
 /* ==========================================================================
    Index
    ========================================================================== */
+
 .container {
   @apply relative;
 }
@@ -18,9 +19,7 @@
 }
 
 .container .post.featured .post-title:after {
-  @apply absolute w-16 h-16 -left-16 top-0 font-normal not-italic text-center text-0_5em font-icon;
-  content: "\e800";
-  color: #ffc336;
+  @apply absolute w-16 h-16 -left-16 top-0 font-normal not-italic text-center text-0_5em font-icon text-yellow-400 content-title-after;
 }
 
 @media (min-width: 640px) {

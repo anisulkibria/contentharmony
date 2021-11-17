@@ -88,8 +88,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-title,
 .hljs-id,
 .scss .hljs-preprocessor {
-    @apply text-red-800;
-    font-weight: bold;
+    @apply text-red-800 font-bold;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -127,8 +126,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-tag .hljs-title,
 .hljs-rule .hljs-property,
 .django .hljs-tag .hljs-keyword {
-    @apply text-blue-900;
-    font-weight: normal;
+    @apply text-blue-900 font-normal;
 }
 
 @media (prefers-color-scheme: darkdisabled) {

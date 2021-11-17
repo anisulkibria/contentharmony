@@ -1,4 +1,6 @@
-// Navigation
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
 
 .nav-header {
     @apply absolute top-0 left-0 w-full text-white z-400 transition-all-eo-0_3s;
@@ -10,8 +12,7 @@
             @apply flex justify-between;
 
             a {
-                @apply relative block w-full py-8 px-0 leading-8 text-1_8rem transition-all-eo-0_1s;
-                color: inherit;
+                @apply relative block w-full py-8 px-0 leading-8 text-1_8rem transition-all-eo-0_1s text-inherit;
 
                 i {
                     @apply inline-block w-16;
@@ -30,8 +31,7 @@
     }
 
     .nav-wrapper {
-        @apply flex py-8 px-16 overflow-hidden;
-        max-height: calc(100vh - theme('spacing.24'));
+        @apply flex py-8 px-16 overflow-hidden nav-height;
     }
 
     .logo {
@@ -59,8 +59,7 @@
 
         button,
         a.button {
-            @apply block w-full bg-transparent whitespace-nowrap leading-8 text-white text-center rounded-lg my-0.5 mx-0 py-3 px-5;
-            border: 2px solid #fff;
+            @apply block w-full bg-transparent whitespace-nowrap leading-8 text-white text-center rounded-lg my-0.5 mx-0 py-3 px-5 border-2 border-solid border-white;
         }
 
         &:last-child {
@@ -71,13 +70,12 @@
         button:hover,
         a.button:focus,
         a.button:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            @apply bg-button;
         }
 
         button.cta,
         a.button.cta {
-            @apply text-blue-700 bg-white;
-            border: 2px solid white;
+            @apply text-blue-700 bg-white border-2 border-solid border-white;
         }
 
         button.cta {
@@ -104,26 +102,22 @@
             @apply text-white font-medium;
 
             &:before {
-                @apply absolute w-full left-0 top-0 py-0 px-4 bg-white no-content -ml-4 -mt-8;
-                height: 3px;
+                @apply absolute w-full left-0 top-0 py-0 px-4 bg-white no-content -ml-4 -mt-8 h-3px;
             }
         }
 
         a.button {
-            @apply p-4 rounded-sm;
-            border: 2px solid white;
+            @apply p-4 rounded-sm border-2 border-solid border-white;
         }
 
         a.button.cta {
-            @apply bg-white text-blue-700;
-            border: 2px solid white;
+            @apply bg-white text-blue-700 border-2 border-solid border-white;
         }
     }
 }
 
 .nav-close {
-    @apply fixed left-0 top-0 w-full h-full hidden z-350;
-    background: rgba(37, 40, 43, 0.9);
+    @apply fixed left-0 top-0 w-full h-full hidden z-350 bg-close;
 }
 
 .menu-active .nav-header .nav-wrapper-control {
@@ -131,7 +125,7 @@
 
     a:focus,
     a:hover {
-        color: #e1e3e6;
+        @apply text-gray-100;
     }
 }
 
@@ -151,8 +145,7 @@
     }
 
     img {
-        @apply w-full;
-        max-width: 300px;
+        @apply w-full max-w-300px;
     }
 }
 
@@ -161,7 +154,7 @@
 }
 
 .has-search .nav-meta li.nav-search {
-    display: block !important;
+    @apply block-imp;
 }
 
 .nav-header li {
@@ -184,11 +177,11 @@
 }
 
 .has-search .nav-wrapper-control .nav-search {
-    display: block !important;
+    @apply block-imp;
 }
 
 .cover-active .nav-wrapper-control a {
-    color: rgba(255, 255, 255, 0.8);
+    @apply text-nav-wrapper;
 
     &:focus,
     &:hover {
@@ -203,7 +196,7 @@
 // Media Queries - Max Width 960px
 @media only screen and (max-width: 960px) {
     .nav-header {
-        transform: translate3d(0, -100%, 0);
+        @apply transform-nav-header;
 
         .nav-wrapper-control {
             @apply block text-right;
@@ -222,8 +215,7 @@
         }
 
         ul.nav-meta {
-            @apply w-full p-0;
-            flex-direction: row !important;
+            @apply w-full p-0 flex-row-imp;
         }
 
         li {
@@ -238,11 +230,7 @@
                 @apply pl-0 text-center text-1_8em;
 
                 &:before {
-                    @apply absolute left-0 top-2/4 bg-transparent hidden no-content w-6;
-                    height: 2px;
-                    margin-left: 6px;
-                    margin-top: -1px;
-                    border-radius: 2px;
+                    @apply absolute left-0 top-2/4 bg-transparent hidden no-content w-6 ml-6px -mt-1px rounded-2px h-2px;
                 }
             }
         }
@@ -274,7 +262,7 @@
 }
 
 .menu-active .nav-header {
-    transform: translate3d(0, 0, 0);
+    @apply transform-nav;
 }
 
 // Media Queries - Max Width 640px
@@ -297,7 +285,7 @@
     }
 
     .has-search .nav-meta li.nav-search {
-        display: none !important;
+        @apply hidden-imp;
     }
 
     .cover-active .nav-header {
@@ -334,7 +322,7 @@
 // Color Scheme - Dark Disable
 @media (prefers-color-scheme: darkdisabled) {
     .nav-close {
-        background: rgba(9, 10, 13, 0.9);
+        @apply bg-nav-close;
     }
 
     .nav-header {
@@ -365,7 +353,6 @@
 // 
 @supports (-webkit-backdrop-filter: blur(2rem)) {
     .menu-active .nav-header .nav-wrapper-control {
-        background: rgba(34, 36, 38, 0.9);
-        -webkit-backdrop-filter: blur(2rem);
+        @apply bg-nav-wrapper;
     }
 }

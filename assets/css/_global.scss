@@ -11,7 +11,7 @@ html.menu-active {
 }
 
 body {
-    @apply font-normal overflow-x-hidden bg-white font-primary text-1em leading-1_75em text-gray-800 antialiased optimizeLegibility;
+    @apply font-normal overflow-x-hidden bg-white font-primary text-1em leading-1_75em text-gray-800 antialiased text-render-optimize;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -28,19 +28,14 @@ textarea {
 }
 
 hr {
-    @apply block w-full border-0;
-    height: 8px;
-    margin: 3em 0;
-    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 119 6'%3E%3Cpath d='M119 3.8c-60 3.5-33.5-7-119 0' fill='none' stroke='%23e1e3e6' stroke-width='3'/%3E%3C/svg%3E") center/5em 100% repeat-x;
+    @apply block w-full border-0 h-8px my-3em mx-0 hr-bg;
 }
 
 hr.small {
-    @apply ml-auto mr-auto bg-clip-content;
-    padding: 0 30%;
-    width: 200px;
+    @apply ml-auto mr-auto bg-clip-content py-0 px-30pr w-200px;
 }
 
-.d-none {
+.hidden-imp {
     @apply hidden;
 }
 
@@ -49,14 +44,12 @@ hr.small {
 }
 
 .post-content a {
-    @apply font-normal no-underline transition-all-eo-0_1s;
-    color: inherit;
-    box-shadow: inset 0 -2px 0 var(--color-primary);
+    @apply font-normal no-underline transition-all-eo-0_1s text-inherit post-shadow;
 }
 
 .post-content a:focus,
 .post-content a:hover {
-    box-shadow: inset 0 -3px 0 var(--color-primary-active);
+    @apply post-shadow-h;
 }
 
 .post-content h1,
@@ -65,8 +58,7 @@ hr.small {
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-    @apply mt-0 mx-0 mb-16 text-black leading-1_25em;
-    text-rendering: optimizeLegibility;
+    @apply mt-0 mx-0 mb-16 text-black leading-1_25em text-render-optimize;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -98,7 +90,7 @@ hr.small {
 
 .post-content h4,
 .post-content .h4 {
-    @apply text-2xl;
+    @apply text-3xl;
 }
 
 .post-content h5,
@@ -114,7 +106,7 @@ hr.small {
 .post-content h4 a,
 .post-content h5 a,
 .post-content h6 a {
-    font-weight: inherit;
+    @apply font-w-inherit;
 }
 
 .post-content p {
@@ -123,12 +115,11 @@ hr.small {
 
 .post-content ol,
 .post-content ul {
-    @apply mt-0 mx-0 mb-16 box-border font-secondary;
-    padding-left: 2em;
+    @apply mt-0 mx-0 mb-16 box-border font-secondary pl-2em;
 }
 
 .post-content ul {
-    list-style: none;
+    @apply list-style-none;
 }
 
 .post-content li {
@@ -137,45 +128,34 @@ hr.small {
 
 .post-content ol>li:before,
 .post-content ul>li:before {
-    @apply absolute font-medium text-right font-primary text-1em leading-2em text-primary;
-    width: 1.5em;
-    margin-left: -2em;
+    @apply absolute font-medium text-right font-primary text-1em leading-2em text-primary w-1_5em -ml-2em;
 }
 
 .post-content ul>li:before {
-    margin-top: -1px;
-    content: "→";
+    @apply -mt-1px content-arrow;
 }
 
 .post-content ol {
-    @apply list-none;
-    counter-reset: item;
+    @apply list-none counter-reset-item;
 }
 
 .post-content ol>li:before {
-    content: counter(item) ". " !important;
-    counter-increment: item;
+    @apply content-li-before;
 }
 
 .post-content ol ol,
 .post-content ol ul,
 .post-content ul ol,
 .post-content ul ul {
-    padding-left: 30px;
-    margin: 15px 0;
+    @apply pl-30px my-15px mx-0;
 }
 
 .post-content blockquote {
-    @apply mt-0 mx-0 mb-16 italic font-normal box-border font-secondary;
-    padding: 0.25em 1em;
-    -moz-box-sizing: border-box;
-    border-left: 0.25em solid var(--color-primary);
+    @apply mt-0 mx-0 mb-16 italic font-normal box-border moz-box-border font-secondary py-0_25em px-1em border-quote;
 }
 
 .post-content blockquote * {
-    @apply font-inherit;
-    margin: 0 0 1em;
-    color: inherit;
+    @apply font-fam-inherit text-inherit mt-0 mx-0 mb-1em;
 }
 
 .post-content blockquote *:first-child {
@@ -209,25 +189,19 @@ hr.small {
 }
 
 .post-content dl {
-    @apply mt-0 mx-0 mb-16 font-secondary;
-    padding-left: 30px;
+    @apply mt-0 mx-0 mb-16 font-secondary pl-30px;
 }
 
 .post-content dl dt {
-    @apply font-bold leading-1_25em text-0_75em;
-    margin-bottom: 0.33334em;
+    @apply font-bold leading-1_25em text-0_75em mb-0_33em;
 }
 
 .post-content dl dt:before {
-    @apply no-content absolute height-1px bg-gray-100;
-    width: 1em;
-    margin-left: -30px;
-    margin-top: 0.5em;
+    @apply no-content absolute h-1px bg-gray-100 w-1em -ml-30px mt-0_5em;
 }
 
 .post-content dl dd {
-    @apply ml-0;
-    margin-bottom: 1em;
+    @apply ml-0 mb-1em;
 }
 
 .post-content mark {
@@ -236,10 +210,7 @@ hr.small {
 
 .post-content code,
 .post-content tt {
-    @apply relative whitespace-pre-wrap py-1 px-2 font-monospace text-0_75em bg-gray-50;
-    margin: 0 1px;
-    border: 1px solid #e1e3e6;
-    top: -2px;
+    @apply relative whitespace-pre-wrap py-1 px-2 font-monospace text-0_75em bg-gray-50 my-0 mx-1px border border-solid border-gray-200 -top-2px;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -251,9 +222,7 @@ hr.small {
 }
 
 .post-content pre {
-    @apply relative mt-0 mx-0 mb-16 overflow-hidden whitespace-pre box-border font-monospace bg-gray-50;
-    padding: 1em;
-    border: 1px solid #e1e3e6;
+    @apply relative mt-0 mx-0 mb-16 overflow-hidden whitespace-pre box-border font-monospace bg-gray-50 p-1em border border-solid border-gray-200;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -263,11 +232,7 @@ hr.small {
 }
 
 .post-content pre .lines {
-    @apply absolute h-full left-0 top-0 text-right box-border select-none leading-2em text-0_75em bg-gray-50 text-gray-500;
-    width: 2.66667em;
-    padding: 1.33334em 0;
-    border-right: 1px solid #e1e3e6;
-    -webkit-user-select: none;
+    @apply absolute h-full left-0 top-0 text-right box-border select-none webkit-select-none leading-2em text-0_75em bg-gray-50 text-gray-500 w-2_66em py-1_33em px-0 border-r border-solid border-gray-100;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -277,29 +242,20 @@ hr.small {
 }
 
 .post-content pre .lines .line {
-    @apply block;
-    padding-right: 0.33334em;
+    @apply block pr-0_33em;
 }
 
 .post-content pre code,
 .post-content pre tt {
-    @apply block static top-auto whitespace-pre bg-transparent overflow-x-auto leading-2em border-none text-0_75em;
-    margin: -1.33334em -1.33334em -1.33334em 1.33334em;
-    padding: 1.33334em;
-    vertical-align: inherit;
+    @apply block static top-auto whitespace-pre bg-transparent overflow-x-auto leading-2em border-none text-0_75em p-1_33em align-inherit -m-1_33em;
 }
 
 .post-content pre code.language-text {
-    margin-left: -1.33334em;
+    @apply -ml-1_33em;
 }
 
 .post-content kbd {
-    @apply inline-block font-bold rounded-sm text-0_9em bg-gray-50;
-    margin-bottom: 0.5em;
-    padding: 1px 8px;
-    border: #e1e3e6 1px solid;
-    text-shadow: #fff 0 1px 0;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
+    @apply inline-block font-bold rounded-sm text-0_9em bg-gray-50 mb-0_5em py-1px px-8px border border-solid border-gray-100 shadow-kbd;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -309,8 +265,7 @@ hr.small {
 }
 
 .post-content table {
-    @apply relative w-full max-w-full mt-0 mx-0 mb-16 bg-gray-50;
-    border: 1px solid #e1e3e6;
+    @apply relative w-full max-w-full mt-0 mx-0 mb-16 bg-gray-50 border border-solid border-gray-200;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -321,8 +276,7 @@ hr.small {
 
 .post-content table td,
 .post-content table th {
-    @apply relative p-6 leading-1_33em text-0_75em;
-    border: 1px solid #e1e3e6;
+    @apply relative p-6 leading-1_33em text-0_75em border border-solid border-gray-200;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -334,8 +288,7 @@ hr.small {
 }
 
 .post-content table th {
-    @apply text-left font-medium leading-1_33em text-0_75em text-gray-500;
-    letter-spacing: 1px;
+    @apply text-left font-medium leading-1_33em text-0_75em text-gray-500 tracking-1px;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -380,8 +333,7 @@ hr.small {
 .post-content input[type="number"],
 .post-content input[type="search"],
 .post-content input[type="password"] {
-    @apply w-full h-auto p-4 box-border outline-none shadow-none bg-gray-50 text-gray-900 transition-all-eo-0_1s;
-    border: 1px solid #e1e3e6;
+    @apply w-full h-auto p-4 box-border outline-none shadow-none bg-gray-50 text-gray-900 transition-all-eo-0_1s border border-solid border-gray-200;
 }
 
 @media (prefers-color-scheme: darkdisabled) {
@@ -463,8 +415,7 @@ hr.small {
 .post-content input[type="button"],
 .post-content button,
 .post-content .button {
-    @apply block w-full p-4 border-0 box-border font-semibold text-white no-underline text-center cursor-pointer bg-primary transition-all-eo-0_1s appearance-normal;
-    border-radius: 4rem;
+    @apply block w-full p-4 border-0 box-border font-semibold text-white no-underline text-center cursor-pointer bg-primary transition-all-eo-0_1s appearance-normal rounded-4rem;
 }
 
 .post-content input[type="reset"]:hover,
@@ -482,25 +433,9 @@ hr.small {
 .post-content .button:focus {
     @apply bg-primary;
 }
-
-.wide {
-    @apply min-w-full;
-    max-width: calc(72rem + 24vw) !important;
-    width: calc(100vw - 4rem);
-  }
   
-  @media only screen and (max-width: 640px) {
+@media only screen and (max-width: 640px) {
     .wide {
-      @apply max-w-full min-w-full w-full;
+        @apply max-w-full min-w-full w-full;
     }
-  }
-  
-  @keyframes fadein {
-    0% {
-      opacity: 0.2;
-    }
-  
-    100% {
-      opacity: 0.9;
-    }
-  }
+}

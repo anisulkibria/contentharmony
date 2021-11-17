@@ -1,5 +1,9 @@
+/* ==========================================================================
+   Avatar
+   ========================================================================== */
+
 .avatar {
-    @apply relative overflow-hidden m-0 box-border bg-gray-100 border-2px-solid-gray-200;
+    @apply relative overflow-hidden m-0 box-border bg-gray-100 border-2 border-solid border-gray-100;
 }
 
 @media (prefers-color-scheme: darkdisabled) {

@@ -8,8 +8,8 @@
 	<div class="cols-3">
 		{{#foreach posts limit="24"}}
 				<div class="col">
-					<article class="{{post_class}} my-3">
-							<div class="mb-2">
+					<article class="{{post_class}} my-12">
+							<div class="mb-8">
 								{{#if feature_image}}
 										<a href="{{url}}"><img src="{{img_url feature_image}}" style="max-width: 100%;" /></a>
 								{{else}}
@@ -17,7 +17,7 @@
 								{{/if}}
 							</div>
 							<div>
-								<h2 class="post-title mt-1"><a href="{{url}}">{{{title}}}</a></h2>
+								<h2 class="post-title mt-4"><a href="{{url}}">{{{title}}}</a></h2>
 
 								<span class="post-meta">
 									{{#has tag="Updates, Docs, Articles, Blog" }}
@@ -32,7 +32,7 @@
 										&bull; ⏱ {{reading_time minute=(t "1 min") minutes=(t "% mins")}}
 									{{/has}}
 									{{#has tag="Articles, Blog" }}
-										&bull;  💬 <div id="fastcomments-widget-comment-count-{{@index}}" class="d-inline"></div>
+										&bull;  💬 <div id="fastcomments-widget-comment-count-{{@index}}" class="inline-imp"></div>
 									{{/has}}
 
 								</span>
